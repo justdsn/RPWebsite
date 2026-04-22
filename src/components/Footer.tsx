@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container-main py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <Link
               to="/"
               className="inline-flex items-center gap-2.5 mb-4 group"
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           {/* Quick links */}
-          <div>
+          <div className="sm:text-right">
             <h3 className="text-white text-sm font-semibold mb-4 tracking-wide">Quick Links</h3>
             <ul role="list" className="space-y-2.5">
               {navLinks.map((link) => (
