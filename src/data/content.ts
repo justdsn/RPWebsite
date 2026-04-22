@@ -177,8 +177,8 @@ export const documents = [
   {
     id: "proposal-doc",
     title: "Proposal Document",
-    description: "Full written proposal submitted at the project proposal milestone.",
-    link: "#", // TODO: Replace with Google Drive link for Proposal Document
+    description: "Individual proposal documents of each component.",
+    link: "https://drive.google.com/drive/folders/1iKCJsuhjvI3_nLoxUYo0ZOiRcgwEnTLQ?usp=sharing", // TODO: Replace with Google Drive link for Proposal Document
   },
   {
     id: "checklist",
