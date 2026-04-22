@@ -6,32 +6,32 @@ import Footer from "./Footer";
 // Per-route meta configuration
 const routeMeta: Record<string, { title: string; description: string }> = {
   "/": {
-    title: "FootprintLK — Privacy-First Digital Footprint Intelligence",
+    title: "FootprintLK - Privacy-First Digital Footprint Intelligence",
     description:
       "FootprintLK is a Sri Lanka-focused privacy and OSINT research project helping citizens understand their digital footprint, detect exposure, and take action.",
   },
   "/scope": {
-    title: "Research Scope — FootprintLK",
+    title: "Research Scope - FootprintLK",
     description:
       "Domain, methodology, research gap, objectives, and technologies for the FootprintLK OSINT privacy research project.",
   },
   "/milestones": {
-    title: "Project Milestones — FootprintLK",
+    title: "Project Milestones - FootprintLK",
     description:
       "Assessment timeline, deliverables, and milestone details for the FootprintLK research project.",
   },
   "/downloads": {
-    title: "Downloads — FootprintLK",
+    title: "Downloads - FootprintLK",
     description:
       "Download project documents and presentation slides from the FootprintLK research project.",
   },
   "/about": {
-    title: "About Us — FootprintLK",
+    title: "About Us - FootprintLK",
     description:
       "Meet the research team and supervisors behind the FootprintLK privacy and OSINT research project.",
   },
   "/contact": {
-    title: "Contact Us — FootprintLK",
+    title: "Contact Us - FootprintLK",
     description:
       "Get in touch with the FootprintLK research team for enquiries, academic collaboration, or general questions.",
   },

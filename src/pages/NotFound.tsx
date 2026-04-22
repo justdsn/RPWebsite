@@ -15,7 +15,7 @@ export default function NotFound() {
           <path d="M12 8v4M12 16h.01" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </div>
-      <p className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">404 — Page Not Found</p>
+      <p className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">404 - Page Not Found</p>
       <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
         This page does not exist
       </h1>

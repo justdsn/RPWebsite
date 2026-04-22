@@ -186,7 +186,7 @@ export default function Contact() {
                     </h3>
                     <p className="text-sm text-green-700 leading-relaxed">
                       Thank you for reaching out. This form is for demonstration
-                      purposes — in a production environment, your message would be
+                      purposes. In a production environment, your message would be
                       delivered to the research team.
                     </p>
                   </div>

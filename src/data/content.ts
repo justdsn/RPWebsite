@@ -28,7 +28,7 @@ export const homeWhyMatters = [
   {
     title: "Multilingual Identity Reality",
     description:
-      "Sri Lankan names exist in Sinhala script, English transliterations, and romanized variants — standard tools miss cross-variant matches.",
+      "Sri Lankan names exist in Sinhala script, English transliterations, and romanized variants. Standard tools miss cross-variant matches.",
   },
 ];
 
@@ -38,7 +38,7 @@ export const homeCapabilities = [
     label: "01",
     title: "Facial Exposure Detection",
     description:
-      "Detect and match faces across public web sources using MTCNN, FaceNet embeddings, and FAISS similarity search — with privacy-first data handling.",
+      "Detect and match faces across public web sources using MTCNN, FaceNet embeddings, and FAISS similarity search, with privacy-first data handling.",
     tag: "OSINT + Privacy Research",
   },
   {
@@ -46,7 +46,7 @@ export const homeCapabilities = [
     label: "02",
     title: "Social Media Footprint Analysis",
     description:
-      "Collect and analyze public social media data for impersonation signals, PII exposure, username correlation, and NER — with Sinhala/English transliteration support.",
+      "Collect and analyze public social media data for impersonation signals, PII exposure, username correlation, and NER, with Sinhala/English transliteration support.",
     tag: "OSINT Analysis",
   },
   {
@@ -54,7 +54,7 @@ export const homeCapabilities = [
     label: "03",
     title: "Data Breach Analysis",
     description:
-      "Check whether identifiers appear in known breach datasets. Framed as awareness and education — not as a surveillance tool.",
+      "Check whether identifiers appear in known breach datasets. Framed as awareness and education, not as a surveillance tool.",
     tag: "Awareness Tool",
   },
   {
@@ -79,7 +79,7 @@ export const scopeSections = [
     id: "literature-survey",
     title: "Literature Survey",
     placeholder:
-      "This section will present a comprehensive review of existing literature on OSINT methodologies, digital privacy frameworks, facial recognition systems, and social media analysis techniques — with particular attention to studies relevant to South Asian and Sri Lankan contexts. Content will be added here.",
+      "This section will present a comprehensive review of existing literature on OSINT methodologies, digital privacy frameworks, facial recognition systems, and social media analysis techniques, with particular attention to studies relevant to South Asian and Sri Lankan contexts. Content will be added here.",
   },
   {
     id: "research-gap",
@@ -163,34 +163,34 @@ export const milestones = [
 ];
 
 // ─── Downloads Page ───────────────────────────────────────────────────────────
+// HOW TO UPDATE: Replace the placeholder "#" links below with your Google Drive
+// sharing links. Use the format: "https://drive.google.com/file/d/YOUR_FILE_ID/view"
+// Make sure the Drive files are set to "Anyone with the link can view".
+
 export const documents = [
   {
     id: "charter",
     title: "Project Charter",
     description: "Formal project initiation document defining scope, objectives, and stakeholder responsibilities.",
-    status: "pending" as const,
-    link: null,
+    link: "#", // TODO: Replace with Google Drive link for Project Charter
   },
   {
     id: "proposal-doc",
     title: "Proposal Document",
     description: "Full written proposal submitted at the project proposal milestone.",
-    status: "pending" as const,
-    link: null,
+    link: "#", // TODO: Replace with Google Drive link for Proposal Document
   },
   {
     id: "checklist",
     title: "Check List Documents",
     description: "Milestone checklists and deliverable tracking documents.",
-    status: "pending" as const,
-    link: null,
+    link: "#", // TODO: Replace with Google Drive link for Check List Documents
   },
   {
     id: "final-doc",
     title: "Final Documents",
     description: "Complete research report, appendices, and supporting documentation.",
-    status: "pending" as const,
-    link: null,
+    link: "#", // TODO: Replace with Google Drive link for Final Documents
   },
 ];
 
@@ -199,29 +199,25 @@ export const presentations = [
     id: "proposal-slides",
     title: "Proposal Presentation",
     description: "Slides presented at the Project Proposal milestone assessment.",
-    status: "pending" as const,
-    link: null,
+    link: "#", // TODO: Replace with Google Drive link for Proposal Presentation
   },
   {
     id: "pp1-slides",
     title: "Progress Presentation 1",
     description: "Slides from the first progress review presented to the panel.",
-    status: "pending" as const,
-    link: null,
+    link: "#", // TODO: Replace with Google Drive link for Progress Presentation 1
   },
   {
     id: "pp2-slides",
     title: "Progress Presentation 2",
     description: "Slides from the second progress review covering the integrated prototype.",
-    status: "pending" as const,
-    link: null,
+    link: "#", // TODO: Replace with Google Drive link for Progress Presentation 2
   },
   {
     id: "final-slides",
     title: "Final Presentation",
     description: "Slides used during the final assessment and system demonstration.",
-    status: "pending" as const,
-    link: null,
+    link: "#", // TODO: Replace with Google Drive link for Final Presentation
   },
 ];
 

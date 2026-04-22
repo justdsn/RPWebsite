@@ -40,7 +40,7 @@ export default function Navbar() {
           <Link
             to="/"
             className="flex items-center gap-2.5 group"
-            aria-label="FootprintLK — Home"
+            aria-label="FootprintLK - Home"
             onClick={() => setOpen(false)}
           >
             <div

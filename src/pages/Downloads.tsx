@@ -33,8 +33,7 @@ type DocItem = {
   id: string;
   title: string;
   description: string;
-  status: "available" | "pending";
-  link: string | null;
+  link: string;
 };
 
 function DocListItem({ item }: { item: DocItem }) {
@@ -45,34 +44,17 @@ function DocListItem({ item }: { item: DocItem }) {
         <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
       </div>
       <div className="flex items-center gap-3 flex-shrink-0 pt-0.5">
-        <span
-          className={`status-pill ${
-            item.status === "available" ? "status-available" : "status-pending"
-          }`}
-          aria-label={`Status: ${item.status === "available" ? "Available" : "Pending"}`}
+        {/* Download button — links to Google Drive */}
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary py-1.5 px-3 text-xs"
+          aria-label={`Download ${item.title}`}
         >
-          <span
-            aria-hidden="true"
-            className={`inline-block w-1.5 h-1.5 rounded-full ${
-              item.status === "available" ? "bg-green-500" : "bg-yellow-500"
-            }`}
-          />
-          {item.status === "available" ? "Available" : "Pending"}
-        </span>
-
-        {item.status === "available" && item.link ? (
-          <a
-            href={item.link}
-            className="btn-primary py-1.5 px-3 text-xs"
-            download
-            aria-label={`Download ${item.title}`}
-          >
-            <IconDownload />
-            Download
-          </a>
-        ) : (
-          <span className="text-xs text-slate-400 font-medium">Coming soon</span>
-        )}
+          <IconDownload />
+          Download
+        </a>
       </div>
     </li>
   );

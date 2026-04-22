@@ -33,7 +33,7 @@ export default function Scope() {
           <SectionHeader
             tag="Research Scope"
             title="Project Scope"
-            subtitle="A structured overview of the research scope for FootprintLK — covering literature, objectives, methodology, and technologies. Content will be expanded as the project progresses."
+            subtitle="A structured overview of the research scope for FootprintLK, covering literature, objectives, methodology, and technologies. Content will be expanded as the project progresses."
             as="h1"
           />
         </div>

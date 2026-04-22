@@ -68,7 +68,7 @@ export default function Home() {
             {/* Text */}
             <div>
               <span className="section-tag" aria-label="Category">
-                Privacy + OSINT Research — Sri Lanka
+                Privacy + OSINT Research - Sri Lanka
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mt-4 mb-6">
                 FootprintLK:{" "}
@@ -77,14 +77,14 @@ export default function Home() {
               </h1>
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
                 Sri Lanka's rapid social media growth exposes citizens to identity
-                theft, impersonation, phishing, and PII leakage — often without
+                theft, impersonation, phishing, and PII leakage, often without
                 their awareness. FootprintLK is a research-driven system designed
                 to surface what is publicly exposed and help users understand their
                 digital footprint.
               </p>
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
                 Built with PDPA 2022 principles in mind and designed to handle
-                Sinhala, English, and romanized transliteration variants — closing
+                Sinhala, English, and romanized transliteration variants, closing
                 a critical gap for Sri Lankan identity analysis.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -115,7 +115,7 @@ export default function Home() {
           <SectionHeader
             tag="Context"
             title="Why this matters in Sri Lanka"
-            subtitle="The digital landscape has changed faster than public awareness — leaving ordinary citizens exposed in ways they may not recognize."
+            subtitle="The digital landscape has changed faster than public awareness, leaving ordinary citizens exposed in ways they may not recognize."
           />
           <ul
             role="list"
@@ -146,7 +146,7 @@ export default function Home() {
           <SectionHeader
             tag="System Overview"
             title="What FootprintLK includes"
-            subtitle="Four integrated capabilities built for Sri Lankan users — from facial exposure detection to legal compliance guidance."
+            subtitle="Four integrated capabilities built for Sri Lankan users, from facial exposure detection to legal compliance guidance."
           />
           <ul
             role="list"
@@ -191,7 +191,7 @@ export default function Home() {
             <SectionHeader
               tag="Navigation"
               title="Explore the project"
-              subtitle="Key sections of the FootprintLK research site — start wherever is most relevant to you."
+              subtitle="Key sections of the FootprintLK research site. Start wherever is most relevant to you."
             />
           </div>
           <nav aria-label="Page directory">
