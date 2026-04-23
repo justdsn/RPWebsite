@@ -229,11 +229,11 @@ export const presentations = [
 export const teamMembers = [
   {
     id: "m1",
-    name: "Team Member One",
+    name: "Disanayaka S.D.P.N.",
     role: "Group Leader",
-    email: "member1@example.ac.lk",
-    linkedin: "#", // TODO: Replace with LinkedIn profile URL
-    image: "#",   // TODO: Replace with photo path, e.g. "/images/member1.jpg"
+    email: "nethsara11d@gmail.com",
+    linkedin: "https://www.linkedin.com/in/nethsara-disanayaka/", // TODO: Replace with LinkedIn profile URL
+    image: "/images/m1.jpg",   // TODO: Replace with photo path, e.g. "/images/member1.jpg"
     university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
     department: "Computer Systems Engineering",
@@ -244,8 +244,8 @@ export const teamMembers = [
     name: "Nanayakkara K.A.D.D.S.",
     role: "Group Member",
     email: "dhanuka1222@gmail.com",
-    linkedin: "#", // TODO: Replace with LinkedIn profile URL
-    image: "#",   // TODO: Replace with photo path, e.g. "/images/member2.jpg"
+    linkedin: "https://www.linkedin.com/in/dhanukasn/", // TODO: Replace with LinkedIn profile URL
+    image: "/images/m2.jpg",   // TODO: Replace with photo path, e.g. "/images/member2.jpg"
     university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
     department: "Computer Systems Engineering",
@@ -253,11 +253,11 @@ export const teamMembers = [
   },
   {
     id: "m3",
-    name: "Team Member Three",
+    name: "Jayasena J.G.A.R.H.U.",
     role: "Group Member",
-    email: "member3@example.ac.lk",
-    linkedin: "#", // TODO: Replace with LinkedIn profile URL
-    image: "#",   // TODO: Replace with photo path, e.g. "/images/member3.jpg"
+    email: "ruwanharsha2001@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ruwantha-harshamal/", // TODO: Replace with LinkedIn profile URL
+    image: "/images/m3.jpg",   // TODO: Replace with photo path, e.g. "/images/member3.jpg"
     university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
     department: "Computer Systems Engineering",
@@ -265,11 +265,11 @@ export const teamMembers = [
   },
   {
     id: "m4",
-    name: "Team Member Four",
+    name: "Wijesinghe R.P.D.K.N.",
     role: "Group Member",
-    email: "member4@example.ac.lk",
-    linkedin: "#", // TODO: Replace with LinkedIn profile URL
-    image: "#",   // TODO: Replace with photo path, e.g. "/images/member4.jpg"
+    email: "kosalawi36@gmail.com",
+    linkedin: "https://www.linkedin.com/in/kosala-wijesinghe/", // TODO: Replace with LinkedIn profile URL
+    image: "/images/m4.jpg",   // TODO: Replace with photo path, e.g. "/images/member4.jpg"
     university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
     department: "Computer Systems Engineering",
@@ -284,7 +284,7 @@ export const supervisors = [
     role: "Project Supervisor",
     email: "kavinga.y@sliit.lk",
     scholar: "https://scholar.google.com/citations?hl=en&user=BxgvLN4AAAAJ",
-    image: "#",   // TODO: Replace with photo path, e.g. "/images/supervisor1.jpg"
+    image: "/images/supervisor.jpg",   // TODO: Replace with photo path, e.g. "/images/supervisor1.jpg"
     university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
     department: "Computer Systems Engineering",
@@ -296,7 +296,7 @@ export const supervisors = [
     role: "Co-Supervisor",
     email: "kanishka.y@sliit.lk",
     scholar: "https://scholar.google.com/citations?hl=en&user=qwFemTwAAAAJ",
-    image: "#",   // TODO: Replace with photo path, e.g. "/images/supervisor2.jpg"
+    image: "/images/cosupervisor.jpg",   // TODO: Replace with photo path, e.g. "/images/supervisor2.jpg"
     university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
     department: "Computer Systems Engineering",

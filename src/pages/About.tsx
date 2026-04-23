@@ -69,12 +69,12 @@ function MemberCard({
           <img
             src={image}
             alt={`Photo of ${name}`}
-            className={`${isSupervisor ? "w-20 h-20" : "w-16 h-16"} rounded-xl object-cover flex-shrink-0 border border-slate-200 shadow-sm`}
+            className={`${isSupervisor ? "w-24 h-24" : "w-20 h-20"} rounded-xl object-cover flex-shrink-0 border border-slate-200 shadow-sm`}
           />
         ) : (
           <div
             aria-hidden="true"
-            className={`${isSupervisor ? "w-20 h-20 text-xl" : "w-16 h-16 text-lg"} rounded-xl flex items-center justify-center font-bold flex-shrink-0 ${avatarColor}`}
+            className={`${isSupervisor ? "w-24 h-24 text-2xl" : "w-20 h-20 text-xl"} rounded-xl flex items-center justify-center font-bold flex-shrink-0 ${avatarColor}`}
           >
             {initials}
           </div>
