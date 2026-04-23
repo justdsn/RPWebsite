@@ -234,7 +234,7 @@ export const teamMembers = [
     email: "member1@example.ac.lk",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/member1.jpg"
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
+    university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
     department: "Computer Systems Engineering",
     initials: "T1",
@@ -246,9 +246,9 @@ export const teamMembers = [
     email: "dhanuka1222@gmail.com",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/member2.jpg"
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
+    university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
-    department: "Information Technology",
+    department: "Computer Systems Engineering",
     initials: "T2",
   },
   {
@@ -258,9 +258,9 @@ export const teamMembers = [
     email: "member3@example.ac.lk",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/member3.jpg"
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
+    university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
-    department: "Information Technology",
+    department: "Computer Systems Engineering",
     initials: "T3",
   },
   {
@@ -270,9 +270,9 @@ export const teamMembers = [
     email: "member4@example.ac.lk",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/member4.jpg"
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
+    university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
-    department: "Information Technology",
+    department: "Computer Systems Engineering",
     initials: "T4",
   },
 ];
@@ -283,11 +283,11 @@ export const supervisors = [
     name: "Mr. Kavinga Yapa Abeywardhena",
     role: "Project Supervisor",
     email: "kavinga.y@sliit.lk",
-    linkedin: "#", // TODO: Replace with LinkedIn profile URL
+    scholar: "https://scholar.google.com/citations?hl=en&user=BxgvLN4AAAAJ",
     image: "#",   // TODO: Replace with photo path, e.g. "/images/supervisor1.jpg"
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
+    university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
-    department: "Information Technology",
+    department: "Computer Systems Engineering",
     initials: "SV",
   },
   {
@@ -295,11 +295,11 @@ export const supervisors = [
     name: "Mr. Kanishka Yapa",
     role: "Co-Supervisor",
     email: "kanishka.y@sliit.lk",
-    linkedin: "#", // TODO: Replace with LinkedIn profile URL
+    scholar: "https://scholar.google.com/citations?hl=en&user=qwFemTwAAAAJ",
     image: "#",   // TODO: Replace with photo path, e.g. "/images/supervisor2.jpg"
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
+    university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
-    department: "Information Technology",
+    department: "Computer Systems Engineering",
     initials: "CS",
   },
 ];

@@ -16,11 +16,19 @@ const IconEmail = () => (
   </svg>
 );
 
+// Google Scholar icon SVG
+const IconScholar = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.852 4.029c.148-.485.404-.925.742-1.289L12 6.5l6.406 5.74c.338.364.594.804.742 1.289L24 9.5 12 0z" />
+  </svg>
+);
+
 function MemberCard({
   name,
   role,
   email,
   linkedin,
+  scholar,
   image,
   faculty,
   department,
@@ -31,7 +39,8 @@ function MemberCard({
   name: string;
   role: string;
   email: string;
-  linkedin: string;
+  linkedin?: string;
+  scholar?: string;
   image: string;
   faculty: string;
   department: string;
@@ -97,8 +106,19 @@ function MemberCard({
           <span className="truncate">Email</span>
         </a>
 
-        {/* LinkedIn */}
-        {linkedin && linkedin !== "#" ? (
+        {/* Scholar/LinkedIn */}
+        {scholar ? (
+          <a
+            href={scholar}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs font-medium text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
+            aria-label={`Google Scholar profile of ${name}`}
+          >
+            <IconScholar />
+            Google Scholar
+          </a>
+        ) : linkedin && linkedin !== "#" ? (
           <a
             href={linkedin}
             target="_blank"
@@ -109,7 +129,7 @@ function MemberCard({
             <IconLinkedIn />
             LinkedIn
           </a>
-        ) : (
+        ) : !scholar && (
           <span className="inline-flex items-center gap-2 text-xs font-medium text-slate-400 flex-shrink-0" title="Coming soon">
             <IconLinkedIn />
             LinkedIn
@@ -157,7 +177,7 @@ export default function About() {
                   name={sv.name}
                   role={sv.role}
                   email={sv.email}
-                  linkedin={sv.linkedin}
+                  scholar={sv.scholar}
                   image={sv.image}
                   faculty={sv.faculty}
                   department={sv.department}
