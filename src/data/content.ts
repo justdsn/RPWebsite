@@ -79,43 +79,58 @@ export const scopeSections = [
     id: "literature-survey",
     title: "Literature Survey",
     content:
-      "A comprehensive analysis of over 50 academic papers and industry reports focusing on Open Source Intelligence (OSINT) and privacy-preserving AI. Our survey highlights the evolution of facial recognition from traditional Eigenfaces to modern deep learning models like FaceNet and ArcFace. We also explored digital privacy frameworks such as GDPR and Sri Lanka's PDPA 2022, identifying how global standards can be localized for the South Asian digital ecosystem.",
+      "The current literature shows that digital privacy tools are highly fragmented, with most solutions focusing on single aspects such as data breach detection, social media analysis, facial recognition, or legal compliance rather than offering an integrated approach. <br>Tools like HaveIBeenPwned provide simple breach lookups without contextual risk analysis, while OSINT platforms such as Maltego and Sherlock require technical expertise and lack localization for regions like Sri Lanka. Similarly, NLP and transliteration tools do not effectively support Sinhala language variations, limiting accurate social media analysis. Facial recognition systems, including PimEyes and TinEye, raise privacy concerns due to external data storage and lack regional focus, while research-level models are not user-friendly. Legal compliance platforms are either enterprise-focused or lack reliable, jurisdiction-specific guidance for individuals. Overall, existing solutions fail to combine multi-modal privacy detection with accessible, localized legal advisory, highlighting a significant limitation in addressing comprehensive digital privacy risks.",
     image: "/images/scope/literature_survey.png",
   },
   {
     id: "research-gap",
     title: "Research Gap",
     content:
-      "Despite the proliferation of OSINT tools, a critical gap exists in localized identity intelligence. Existing systems struggle with non-Latin scripts (Sinhala/Tamil) and the specific cultural nuances of Sri Lankan social media usage. Furthermore, there is a distinct lack of citizen-centric tools that allow individuals to proactively monitor their own digital footprint, as most OSINT platforms are designed exclusively for law enforcement or corporate security.",
+      "The analysis of existing literature reveals a significant gap in the lack of a unified, user-centric platform that integrates multiple dimensions of digital privacy exposure into a single system. Current solutions operate in isolation, focusing separately on data breaches, social media monitoring, facial recognition, or legal compliance, without providing a comprehensive view of an individual’s overall privacy risk. Additionally, there is a clear absence of localization, particularly for Sri Lanka, where existing tools fail to support Sinhala language processing, local naming conventions, and region-specific data sources. <br> Another critical gap lies in the lack of automated, explainable legal guidance, as most platforms either do not include legal context or require expert knowledge to interpret results. Furthermore, many existing systems raise privacy concerns by storing sensitive user data, especially biometric information, instead of adopting privacy-preserving approaches. Therefore, there is a need for an integrated, privacy-first, and locally adapted solution that not only detects multi-source privacy exposures but also translates them into actionable, legally grounded insights for non-expert users.",
     image: "/images/scope/research_gap.png",
   },
   {
     id: "research-problem",
     title: "Research Problem",
-    content:
-      "Sri Lankan internet users are increasingly vulnerable to identity theft, impersonation, and unintentional PII leakage. The complexity of cross-platform identity correlation—compounded by the use of multiple language variants and transliterated names—makes it nearly impossible for an average citizen to know what information about them is publicly exposed. This research addresses the need for a unified, language-aware digital footprint intelligence system.",
-    image: "/images/scope/research_problem.png",
+    content: "The research addresses several critical issues in the current digital landscape regarding user privacy and exposure:",
+    subSections: [
+      { title: "Fragmentation of Privacy Detection Systems", text: "Existing privacy-related tools operate in silos, where each system focuses on a single aspect such as data breach detection, social media analysis, facial recognition, or legal compliance. This lack of integration prevents users from obtaining a comprehensive understanding of their overall digital privacy exposure. As a result, individuals must rely on multiple platforms, leading to inefficiency and incomplete risk assessment.", icon: "Layers" },
+      { title: "Absence of Localization for Sri Lankan Context", text: "Existing tools are not designed to handle region-specific challenges such as Sinhala language processing, transliteration of names, and local social media usage patterns. This significantly reduces the accuracy and effectiveness of privacy detection for Sri Lankan users, leaving a large portion of the population underserved.", icon: "Globe" },
+      { title: "Limited Support for Non-Technical Users", text: "Most OSINT and cybersecurity tools require a certain level of technical expertise to operate and interpret results. Non-expert users struggle to understand complex outputs, limiting the accessibility and usability of these systems for the general public.", icon: "Users" },
+      { title: "Lack of Automated and Reliable Legal Guidance", text: "Although privacy laws such as the Personal Data Protection Act exist, current tools do not effectively map detected privacy risks to specific legal provisions. Users are often unaware of their rights or the legal actions they can take, and existing AI-based solutions lack verifiable and jurisdiction-specific legal accuracy.", icon: "Scale" },
+      { title: "Privacy Risks in Existing Privacy Tools", text: "Ironically, many privacy detection platforms introduce additional risks by storing sensitive user data, including personal identifiers and biometric information, on external servers. This contradicts the purpose of privacy protection and raises ethical concerns regarding data handling and security.", icon: "ShieldAlert" },
+      { title: "Inability to Correlate Multi-Source Data", text: "Current systems do not effectively correlate data from different sources (breaches, social media, images) to generate a unified insight. This prevents accurate identification of complex threats such as impersonation, identity theft, or combined exposure risks.", icon: "Database" }
+    ],
+    solution: "To address the identified research problems, FootprintLK proposes the development of an integrated, multi-modal privacy exposure detection platform tailored for Sri Lankan users. The system combines data breach detection, social media OSINT analysis, facial exposure recognition, and automated legal compliance advisory into a unified architecture. It introduces context-aware risk scoring to quantify the severity of privacy exposures and employs Sinhala language support to improve localization and accuracy. <br>The platform is designed with a user-friendly interface to ensure accessibility for non-technical users, while a privacy-first approach ensures that sensitive data is processed securely without long-term storage. Additionally, an NLP-driven legal engine maps detected risks to relevant Sri Lankan laws, providing clear, actionable guidance. This holistic approach enables users to understand, assess, and respond to their digital privacy risks effectively."
   },
   {
     id: "research-objectives",
     title: "Research Objectives",
-    content:
-      "Our primary objectives include: (1) Developing a high-accuracy facial exposure detection pipeline using MTCNN and FaceNet. (2) Implementing a multilingual identity correlation engine supporting Sinhala-English transliteration. (3) Creating an automated privacy risk scoring mechanism based on PDPA 2022 guidelines. (4) Designing an intuitive citizen-facing dashboard for real-time digital footprint visualization and remediation.",
-    image: "/images/scope/research_objectives.png",
+    content: "",
+    mainObjective: "To design and develop a comprehensive, multi-modal privacy exposure detection and compliance advisory platform tailored for Sri Lankan users.",
+    points: [
+      { text: "To develop a data breach detection module that identifies and analyzes exposed credentials and personal data from surface web, paste sites, and dark web sources.", icon: "Search" },
+      { text: "To implement a social media analysis system capable of detecting PII exposure and identifying impersonation accounts across multiple platforms.", icon: "Globe" },
+      { text: "To design and integrate a Sinhala-to-English transliteration mechanism to improve the accuracy of user identification in social media OSINT.", icon: "Languages" },
+      { text: "To build a facial exposure detection pipeline that identifies unauthorized usage of user images across publicly available web sources.", icon: "ScanFace" },
+      { text: "To ensure privacy preservation by processing sensitive data in-memory and avoiding long-term storage of personally identifiable or biometric information.", icon: "Shield" },
+      { text: "To create a risk scoring mechanism that evaluates and quantifies overall privacy exposure using multiple weighted factors.", icon: "Activity" },
+      { text: "To provide clear, user-friendly, and actionable recommendations based on identified risks and legal mappings.", icon: "FileCheck" },
+      { text: "To design an intuitive web-based dashboard that presents privacy exposure insights in a simple and understandable format for non-technical users.", icon: "LayoutDashboard" }
+    ]
   },
   {
     id: "methodology",
     title: "Methodology",
     content:
-      "The research follows a design-science research methodology. We utilize a modular architecture consisting of: (a) Data Acquisition Layer for ethical OSINT collection. (b) Intelligence Layer utilizing FAISS for high-dimensional similarity search and custom NER models for PII extraction. (c) Compliance Layer for mapping detected exposures to legal clauses. The system is evaluated using precision-recall metrics and user-centric privacy perception surveys.",
+      "The proposed system follows a multi-module, microservices-based architecture that integrates data breach detection, social media exposure analysis, facial image detection, and legal compliance advisory into a unified pipeline. Data is collected from multiple sources such as public web repositories, social media platforms, and image datasets, followed by preprocessing techniques including deduplication and normalization. A hybrid approach combining rule-based methods and natural language processing is used to extract personally identifiable information (PII), while machine learning techniques are applied for risk scoring and classification. Social media analysis incorporates Sinhala transliteration and fuzzy matching to improve detection accuracy, and facial recognition is performed using deep learning models for feature extraction and similarity matching. <br>The outputs from all modules are aggregated and processed through an NLP-driven legal advisory engine that maps detected exposures to relevant Sri Lankan laws and generates actionable recommendations. The entire system is designed with a privacy-first approach, ensuring minimal data retention and secure processing, while delivering results through a user-friendly web-based dashboard.",
     image: "/images/scope/methodology.png",
   },
   {
     id: "technologies",
     title: "Technologies Used",
-    content:
-      "The system is built on a modern full-stack architecture. The frontend uses React with Tailwind CSS for a premium user experience. The backend is powered by Python (FastAPI), leveraging TensorFlow and PyTorch for AI/ML tasks. We use MTCNN for face detection, FaceNet for embeddings, and FAISS for vector indexing. Data is managed through a combination of PostgreSQL for structured data and Redis for high-speed caching of transient OSINT signals.",
-    image: "/images/scope/technologies_used.png",
+
+
   },
 ];
 
