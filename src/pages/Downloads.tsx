@@ -80,8 +80,8 @@ export default function Downloads() {
         <div className="container-main py-14 lg:py-20">
           <SectionHeader
             tag="Downloads"
-            title="Project documents and slides"
-            subtitle="Access project documents and presentation slides. Files are published as milestones are completed."
+            title="Project Documents & Slides"
+            subtitle="Access project documents and presentation slides"
             as="h1"
           />
         </div>

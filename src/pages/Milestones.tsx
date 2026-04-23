@@ -37,8 +37,8 @@ export default function Milestones() {
         <div className="container-main py-14 lg:py-20">
           <SectionHeader
             tag="Project Milestones"
-            title="Assessments and deliverables"
-            subtitle="Select an assessment from the dropdown to view its description, scheduled date, and marks allocated."
+            title="Assessments & Deliverables"
+            subtitle="Select an assessment from the dropdown to view its description, scheduled date, and marks allocated"
             as="h1"
           />
         </div>
@@ -90,9 +90,8 @@ export default function Milestones() {
                 <div className="flex items-start justify-between gap-4 flex-wrap mb-4">
                   <h2 className="text-xl font-bold text-slate-900">{current.label}</h2>
                   <span
-                    className={`inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full border ${
-                      statusColors[current.status] || "bg-slate-50 text-slate-500 border-slate-200"
-                    }`}
+                    className={`inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full border ${statusColors[current.status] || "bg-slate-50 text-slate-500 border-slate-200"
+                      }`}
                   >
                     {current.status}
                   </span>
@@ -150,13 +149,12 @@ export default function Milestones() {
                       onClick={() => setSelected(m.id)}
                       aria-current={selected === m.id ? "true" : undefined}
                       aria-label={`View details for ${m.label}`}
-                      className={`absolute -left-9 top-0.5 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
-                        selected === m.id
-                          ? "bg-blue-700 border-blue-700 scale-110"
-                          : m.status === "Completed" || m.status === "Submitted"
+                      className={`absolute -left-9 top-0.5 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${selected === m.id
+                        ? "bg-blue-700 border-blue-700 scale-110"
+                        : m.status === "Completed" || m.status === "Submitted"
                           ? "bg-blue-100 border-blue-400 hover:border-blue-600"
                           : "bg-white border-slate-300 hover:border-blue-300"
-                      }`}
+                        }`}
                     >
                       {(m.status === "Completed" || m.status === "Submitted") && (
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -172,16 +170,14 @@ export default function Milestones() {
                     >
                       <div className="flex items-center gap-2 flex-wrap mb-0.5">
                         <span
-                          className={`text-[0.9rem] font-semibold transition-colors ${
-                            selected === m.id ? "text-blue-700" : "text-slate-800 group-hover:text-blue-700"
-                          }`}
+                          className={`text-[0.9rem] font-semibold transition-colors ${selected === m.id ? "text-blue-700" : "text-slate-800 group-hover:text-blue-700"
+                            }`}
                         >
                           {m.label}
                         </span>
                         <span
-                          className={`text-xs font-semibold px-2 py-0.5 rounded-full border ${
-                            statusColors[m.status] || "bg-slate-50 text-slate-500 border-slate-200"
-                          }`}
+                          className={`text-xs font-semibold px-2 py-0.5 rounded-full border ${statusColors[m.status] || "bg-slate-50 text-slate-500 border-slate-200"
+                            }`}
                         >
                           {m.status}
                         </span>

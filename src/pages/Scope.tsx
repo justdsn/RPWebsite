@@ -29,11 +29,11 @@ export default function Scope() {
         aria-label="Page header"
         className="page-header-bg border-b border-slate-100"
       >
-        <div className="container-main py-14 lg:py-20">
+        <div className="container-main py-0 lg:py-20">
           <SectionHeader
             tag="Research Scope"
             title="Project Scope"
-            subtitle="A structured overview of the research scope for FootprintLK, covering literature, objectives, methodology, and technologies. Content will be expanded as the project progresses."
+            subtitle="A structured overview of the project scope for FootprintLK"
             as="h1"
           />
         </div>
@@ -58,8 +58,8 @@ export default function Scope() {
                     key={section.id}
                     role="listitem"
                     className={`border rounded-xl overflow-hidden transition-all duration-200 ${isOpen
-                        ? "border-blue-200 shadow-sm"
-                        : "border-slate-200 hover:border-blue-100"
+                      ? "border-blue-200 shadow-sm"
+                      : "border-slate-200 hover:border-blue-100"
                       }`}
                   >
                     <h2>
@@ -68,9 +68,9 @@ export default function Scope() {
                         aria-expanded={isOpen}
                         aria-controls={panelId}
                         onClick={() => toggle(section.id)}
-                        className={`w-full flex items-center justify-between gap-4 px-5 py-4 text-left transition-colors ${isOpen
-                            ? "bg-blue-50 text-blue-800"
-                            : "bg-white text-slate-800 hover:bg-slate-50"
+                        className={`w-full flex items-center justify-between gap-4 px-6 py-5 text-left transition-colors ${isOpen
+                          ? "bg-blue-50 text-blue-800"
+                          : "bg-white text-slate-800 hover:bg-slate-50"
                           }`}
                       >
                         <span className="flex items-center gap-3">

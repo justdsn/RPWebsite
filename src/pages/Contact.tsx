@@ -87,8 +87,8 @@ export default function Contact() {
         <div className="container-main py-14 lg:py-20">
           <SectionHeader
             tag="Contact Us"
-            title="Get in touch"
-            subtitle="For research enquiries, academic collaboration, or general questions about the FootprintLK project."
+            title="Get in Touch"
+            subtitle="For enquiries or general questions about the FootprintLK project."
             as="h1"
           />
         </div>
@@ -225,9 +225,8 @@ export default function Contact() {
                       value={form.name}
                       onChange={handleChange}
                       placeholder="Your full name"
-                      className={`${inputBase} ${
-                        errors.name ? "border-red-400 focus:ring-red-400" : "border-slate-300"
-                      }`}
+                      className={`${inputBase} ${errors.name ? "border-red-400 focus:ring-red-400" : "border-slate-300"
+                        }`}
                     />
                     {errors.name && (
                       <p id="err-name" role="alert" className="text-xs text-red-600 mt-1.5">
@@ -256,9 +255,8 @@ export default function Contact() {
                       value={form.email}
                       onChange={handleChange}
                       placeholder="you@example.com"
-                      className={`${inputBase} ${
-                        errors.email ? "border-red-400 focus:ring-red-400" : "border-slate-300"
-                      }`}
+                      className={`${inputBase} ${errors.email ? "border-red-400 focus:ring-red-400" : "border-slate-300"
+                        }`}
                     />
                     {errors.email && (
                       <p id="err-email" role="alert" className="text-xs text-red-600 mt-1.5">
@@ -286,9 +284,8 @@ export default function Contact() {
                       value={form.subject}
                       onChange={handleChange}
                       placeholder="Research enquiry / Collaboration / Other"
-                      className={`${inputBase} ${
-                        errors.subject ? "border-red-400 focus:ring-red-400" : "border-slate-300"
-                      }`}
+                      className={`${inputBase} ${errors.subject ? "border-red-400 focus:ring-red-400" : "border-slate-300"
+                        }`}
                     />
                     {errors.subject && (
                       <p id="err-subject" role="alert" className="text-xs text-red-600 mt-1.5">
@@ -316,9 +313,8 @@ export default function Contact() {
                       value={form.message}
                       onChange={handleChange}
                       placeholder="Your message to the research team..."
-                      className={`${inputBase} resize-y min-h-[120px] ${
-                        errors.message ? "border-red-400 focus:ring-red-400" : "border-slate-300"
-                      }`}
+                      className={`${inputBase} resize-y min-h-[120px] ${errors.message ? "border-red-400 focus:ring-red-400" : "border-slate-300"
+                        }`}
                     />
                     {errors.message && (
                       <p id="err-message" role="alert" className="text-xs text-red-600 mt-1.5">

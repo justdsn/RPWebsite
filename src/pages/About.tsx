@@ -148,11 +148,11 @@ export default function About() {
         aria-label="Page header"
         className="page-header-bg border-b border-slate-100"
       >
-        <div className="container-main py-14 lg:py-20 text-center">
+        <div className="container-main py-14 lg:py-20 text-left">
           <SectionHeader
             tag="About Us"
-            title="The team behind FootprintLK"
-            subtitle="FootprintLK is a collaborative research project developed by a group of undergraduate researchers with a shared focus on digital privacy, OSINT, and citizen empowerment in Sri Lanka."
+            title="The Team Behind FootprintLK"
+            subtitle="FootprintLK is a collaborative project developed with a shared focus on digital privacy, OSINT, and citizen empowerment in Sri Lanka."
             as="h1"
           />
         </div>
