@@ -78,38 +78,44 @@ export const scopeSections = [
   {
     id: "literature-survey",
     title: "Literature Survey",
-    placeholder:
-      "This section will present a comprehensive review of existing literature on OSINT methodologies, digital privacy frameworks, facial recognition systems, and social media analysis techniques, with particular attention to studies relevant to South Asian and Sri Lankan contexts. Content will be added here.",
+    content:
+      "A comprehensive analysis of over 50 academic papers and industry reports focusing on Open Source Intelligence (OSINT) and privacy-preserving AI. Our survey highlights the evolution of facial recognition from traditional Eigenfaces to modern deep learning models like FaceNet and ArcFace. We also explored digital privacy frameworks such as GDPR and Sri Lanka's PDPA 2022, identifying how global standards can be localized for the South Asian digital ecosystem.",
+    image: "/images/scope/literature_survey.png",
   },
   {
     id: "research-gap",
     title: "Research Gap",
-    placeholder:
-      "This section identifies the specific gaps in existing tools and research: the absence of Sri Lanka-specific OSINT privacy tools, lack of Sinhala/English transliteration support in identity analysis, and the disconnect between technical OSINT capabilities and public-facing privacy awareness tools. Content will be added here.",
+    content:
+      "Despite the proliferation of OSINT tools, a critical gap exists in localized identity intelligence. Existing systems struggle with non-Latin scripts (Sinhala/Tamil) and the specific cultural nuances of Sri Lankan social media usage. Furthermore, there is a distinct lack of citizen-centric tools that allow individuals to proactively monitor their own digital footprint, as most OSINT platforms are designed exclusively for law enforcement or corporate security.",
+    image: "/images/scope/research_gap.png",
   },
   {
     id: "research-problem",
     title: "Research Problem",
-    placeholder:
-      "Sri Lankan internet users lack access to tools that proactively surface their publicly exposed personal information in a privacy-respecting, language-aware, and regulation-aligned manner. This research addresses that problem by designing and evaluating a citizen-facing digital footprint intelligence system. Content will be added here.",
+    content:
+      "Sri Lankan internet users are increasingly vulnerable to identity theft, impersonation, and unintentional PII leakage. The complexity of cross-platform identity correlation—compounded by the use of multiple language variants and transliterated names—makes it nearly impossible for an average citizen to know what information about them is publicly exposed. This research addresses the need for a unified, language-aware digital footprint intelligence system.",
+    image: "/images/scope/research_problem.png",
   },
   {
     id: "research-objectives",
     title: "Research Objectives",
-    placeholder:
-      "The research objectives will be listed here as a structured set of measurable goals, covering facial exposure detection accuracy, social media correlation effectiveness, breach identification scope, and compliance mapping completeness. Content will be added here.",
+    content:
+      "Our primary objectives include: (1) Developing a high-accuracy facial exposure detection pipeline using MTCNN and FaceNet. (2) Implementing a multilingual identity correlation engine supporting Sinhala-English transliteration. (3) Creating an automated privacy risk scoring mechanism based on PDPA 2022 guidelines. (4) Designing an intuitive citizen-facing dashboard for real-time digital footprint visualization and remediation.",
+    image: "/images/scope/research_objectives.png",
   },
   {
     id: "methodology",
     title: "Methodology",
-    placeholder:
-      "This section will describe the end-to-end research methodology: data collection strategies, facial recognition pipeline design, NLP-based social analysis, breach dataset integration approach, compliance mapping logic, and the evaluation framework used to assess system performance. Content will be added here.",
+    content:
+      "The research follows a design-science research methodology. We utilize a modular architecture consisting of: (a) Data Acquisition Layer for ethical OSINT collection. (b) Intelligence Layer utilizing FAISS for high-dimensional similarity search and custom NER models for PII extraction. (c) Compliance Layer for mapping detected exposures to legal clauses. The system is evaluated using precision-recall metrics and user-centric privacy perception surveys.",
+    image: "/images/scope/methodology.png",
   },
   {
     id: "technologies",
     title: "Technologies Used",
-    placeholder:
-      "This section will present a structured grid of technologies across categories: ML/AI frameworks (MTCNN, FaceNet, FAISS), NLP tools, web scraping infrastructure, backend services, frontend frameworks, and privacy-preserving storage approaches. Content will be added here.",
+    content:
+      "The system is built on a modern full-stack architecture. The frontend uses React with Tailwind CSS for a premium user experience. The backend is powered by Python (FastAPI), leveraging TensorFlow and PyTorch for AI/ML tasks. We use MTCNN for face detection, FaceNet for embeddings, and FAISS for vector indexing. Data is managed through a combination of PostgreSQL for structured data and Redis for high-speed caching of transient OSINT signals.",
+    image: "/images/scope/technologies_used.png",
   },
 ];
 

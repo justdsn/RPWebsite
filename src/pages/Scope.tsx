@@ -3,55 +3,77 @@ import { scopeSections } from "../data/content";
 
 export default function Scope() {
   return (
-    <main id="main-content">
+    <main id="main-content" className="bg-slate-50 min-h-screen">
       {/* Page header */}
       <section
         aria-label="Page header"
-        className="page-header-bg border-b border-slate-100"
+        className="relative overflow-hidden pt-20 pb-16 lg:pt-32 lg:pb-24"
       >
-        <div className="container-main py-0 lg:py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-indigo-600/5 -z-10" />
+        <div className="container-main">
           <SectionHeader
-            tag="Research Scope"
+            tag="Strategic Blueprint"
             title="Project Scope"
-            subtitle="A structured overview of the project scope for FootprintLK"
+            subtitle="Defining the boundaries, objectives, and methodologies of our digital footprint research."
             as="h1"
+            className="text-center"
           />
         </div>
       </section>
 
       {/* Scope sections details */}
-      <section aria-label="Scope details" className="page-section bg-slate-50 py-16 lg:py-24">
+      <section aria-label="Scope details" className="pb-24 lg:pb-32">
         <div className="container-main">
-          <div className="max-w-5xl mx-auto space-y-16">
+          <div className="grid grid-cols-1 gap-12 lg:gap-20">
             {scopeSections.map((section, idx) => {
               const isEven = idx % 2 === 0;
               return (
                 <div
                   key={section.id}
-                  className={`flex flex-col md:flex-row gap-8 lg:gap-12 items-center bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md ${
-                    isEven ? "md:flex-row" : "md:flex-row-reverse"
+                  className={`flex flex-col lg:flex-row gap-10 lg:gap-16 items-center ${
+                    isEven ? "" : "lg:flex-row-reverse"
                   }`}
                 >
-                  <div className="w-full md:w-5/12 lg:w-1/2 h-64 md:h-auto min-h-[250px] lg:min-h-[350px] bg-gradient-to-br from-blue-50 to-indigo-50/50 flex items-center justify-center p-8 relative">
-                    <img 
-                      src="/images/scope_illustration.png" 
-                      alt={`${section.title} Illustration`} 
-                      className="w-full h-full object-contain max-w-[280px] lg:max-w-[320px] drop-shadow-xl transition-transform duration-500 hover:scale-105" 
-                    />
+                  {/* Image Container */}
+                  <div className="w-full lg:w-1/2 group">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 group-hover:shadow-blue-200/50 group-hover:-translate-y-2">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                      <img
+                        src={section.image}
+                        alt={`${section.title} Illustration`}
+                        className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                      />
+                    </div>
                   </div>
-                  
-                  <div className="w-full md:w-7/12 lg:w-1/2 p-8 md:p-10 lg:p-12">
-                    <div className="flex flex-col items-start gap-4 mb-6">
-                      <span className="text-sm font-bold font-mono text-blue-600 bg-blue-100/60 px-4 py-1.5 rounded-full border border-blue-200">
+
+                  {/* Content Container */}
+                  <div className="w-full lg:w-1/2 space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="h-px w-12 bg-blue-600/30" />
+                      <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
                         Section {String(idx + 1).padStart(2, "0")}
                       </span>
-                      <h2 className="text-2xl lg:text-3xl font-extrabold text-slate-800 tracking-tight">
-                        {section.title}
-                      </h2>
                     </div>
-                    <p className="text-slate-600 leading-relaxed text-xs lg:text-sm">
-                      {section.placeholder}
-                    </p>
+                    
+                    <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+                      {section.title}
+                    </h2>
+                    
+                    <div className="prose prose-slate max-w-none">
+                      <p className="text-slate-600 leading-relaxed text-sm lg:text-[15px]">
+                        {section.content}
+                      </p>
+                    </div>
+
+                    <div className="pt-4 flex flex-wrap gap-3">
+                      {/* Decorative chips or tags could go here */}
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-500 shadow-sm">
+                        Research Focus
+                      </span>
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-500 shadow-sm">
+                        Domain Specific
+                      </span>
+                    </div>
                   </div>
                 </div>
               );
