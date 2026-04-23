@@ -40,6 +40,69 @@ export default function Milestones() {
 
       <section aria-label="Milestone details" className="page-section bg-white">
         <div className="container-main">
+          
+          {/* ── Horizontal Timeline Overview ── */}
+          <div className="mb-16">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-xl font-extrabold text-slate-900 uppercase tracking-widest">
+                Timeline Overview
+              </h2>
+              <span className="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
+                Total: <span className="text-slate-800 font-bold">{totalMarks} marks</span>
+              </span>
+            </div>
+
+            <div className="relative overflow-x-auto pb-8 pt-4 scrollbar-hide">
+              <div className="min-w-[900px] flex justify-between relative px-8">
+                {/* Connecting Line */}
+                <div className="absolute top-3.5 left-16 right-16 h-1 bg-blue-100 -z-10 rounded-full" />
+
+                {milestones.map((m) => {
+                  const isSelected = selected === m.id;
+                  return (
+                    <button
+                      key={m.id}
+                      onClick={() => setSelected(m.id === selected ? "" : m.id)}
+                      className="relative flex flex-col items-center w-32 group outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg p-1"
+                      aria-pressed={isSelected}
+                      aria-label={`Select ${m.label}`}
+                    >
+                      {/* Node Dot */}
+                      <div
+                        className={`w-8 h-8 rounded-full border-4 mb-4 transition-all duration-300 z-10 flex items-center justify-center ${
+                          isSelected
+                            ? "bg-blue-600 border-blue-200 scale-125 shadow-lg shadow-blue-300/50"
+                            : "bg-white border-blue-400 group-hover:border-blue-600 group-hover:scale-110 shadow-sm"
+                        }`}
+                      >
+                        {isSelected && <span className="w-2.5 h-2.5 rounded-full bg-white block" />}
+                      </div>
+                      
+                      {/* Text */}
+                      <div className="text-center">
+                        <p className={`text-xs font-bold uppercase tracking-wider mb-1.5 transition-colors ${
+                          isSelected ? "text-blue-600" : "text-slate-400 group-hover:text-blue-500"
+                        }`}>
+                          {m.date}
+                        </p>
+                        <p className={`text-[0.85rem] font-semibold leading-tight transition-colors ${
+                          isSelected ? "text-slate-900" : "text-slate-600 group-hover:text-slate-800"
+                        }`}>
+                          {m.label}
+                        </p>
+                        <p className={`text-xs font-bold mt-1.5 flex justify-center items-center gap-1 transition-colors ${
+                          isSelected ? "text-blue-600" : "text-slate-400"
+                        }`}>
+                           <IconStar /> {m.marks}
+                        </p>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
           <div className="max-w-2xl mx-auto mb-16">
             {/* Dropdown */}
             <div className="mb-6">
@@ -76,175 +139,49 @@ export default function Milestones() {
             </div>
 
             {/* Detail panel */}
-            {current && (
+            {current ? (
               <article
                 aria-label={`Details for ${current.label}`}
-                className="card border-blue-200 bg-blue-50/30 shadow-sm animate-fade-in"
+                className="card border-blue-200 bg-blue-50/40 shadow-md transition-all animate-fade-in"
               >
-                <div className="flex items-start justify-between gap-4 flex-wrap mb-3">
+                <div className="flex items-start justify-between gap-4 flex-wrap mb-4">
                   <div>
-                    <p className="text-xs font-semibold text-blue-500 uppercase tracking-widest mb-1 flex items-center gap-1.5">
+                    <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
                       <IconCalendar />
                       {current.date}
                     </p>
-                    <h2 className="text-xl font-bold text-slate-900">{current.label}</h2>
+                    <h2 className="text-2xl font-bold text-slate-900 leading-tight">{current.label}</h2>
                   </div>
-                  <div className="flex items-center gap-1.5 bg-blue-700 text-white text-sm font-bold px-3 py-1.5 rounded-lg flex-shrink-0">
+                  <div className="flex items-center gap-1.5 bg-blue-700 text-white text-sm font-bold px-3.5 py-1.5 rounded-lg flex-shrink-0 shadow-sm">
                     <IconStar />
                     {current.marks} marks
                   </div>
                 </div>
                 {current.description && (
-                  <p className="text-sm text-slate-600 leading-7">{current.description}</p>
+                  <div className="bg-white rounded-lg p-4 border border-blue-100 shadow-sm mt-4">
+                    <p className="text-sm text-slate-700 leading-7">{current.description}</p>
+                  </div>
                 )}
               </article>
+            ) : (
+              <div className="rounded-xl border border-dashed border-slate-200 bg-slate-50 px-6 py-12 text-center transition-all">
+                <div
+                  aria-hidden="true"
+                  className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="4" width="18" height="18" rx="3" stroke="#2563eb" strokeWidth="1.8" />
+                    <path d="M3 9h18M8 2v4M16 2v4" stroke="#2563eb" strokeWidth="1.8" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <p className="text-sm font-semibold text-slate-600 mb-1">Select an assessment</p>
+                <p className="text-sm text-slate-400">
+                  Click a milestone on the timeline or choose from the dropdown above to view assessment details.
+                </p>
+              </div>
             )}
           </div>
-
-          {/* ── Timeline ── */}
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-between mb-10">
-              <h2 className="text-xl font-extrabold text-slate-900 uppercase tracking-widest">
-                Timeline
-              </h2>
-              <span className="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
-                Total: <span className="text-slate-800 font-bold">{totalMarks} marks</span>
-              </span>
-            </div>
-
-            {/* Desktop: alternating sides. Mobile: all left-aligned */}
-            <div className="relative">
-              {/* Centre spine */}
-              <div
-                aria-hidden="true"
-                className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-200 via-blue-400 to-blue-200 -translate-x-1/2"
-              />
-              {/* Mobile spine */}
-              <div
-                aria-hidden="true"
-                className="md:hidden absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-blue-200 via-blue-400 to-blue-200"
-              />
-
-              <ol role="list" className="flex flex-col gap-10">
-                {milestones.map((m, idx) => {
-                  const isRight = idx % 2 === 0;
-                  const isSelected = selected === m.id;
-
-                  return (
-                    <li key={m.id} className="relative md:grid md:grid-cols-2 md:gap-12">
-                      {/* ── Dot on the spine ── */}
-                      <button
-                        onClick={() => setSelected(m.id === selected ? "" : m.id)}
-                        aria-pressed={isSelected}
-                        aria-label={`${isSelected ? "Deselect" : "Select"} ${m.label}`}
-                        className={`
-                          hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10
-                          w-5 h-5 rounded-full border-2 items-center justify-center transition-all duration-200
-                          ${isSelected
-                            ? "bg-blue-700 border-blue-700 scale-125 shadow-lg shadow-blue-300"
-                            : "bg-white border-blue-400 hover:border-blue-700 hover:scale-110"
-                          }
-                        `}
-                      >
-                        {isSelected && (
-                          <span className="w-2 h-2 rounded-full bg-white block" />
-                        )}
-                      </button>
-
-                      {/* Mobile dot */}
-                      <button
-                        onClick={() => setSelected(m.id === selected ? "" : m.id)}
-                        aria-pressed={isSelected}
-                        aria-label={`${isSelected ? "Deselect" : "Select"} ${m.label}`}
-                        className={`
-                          md:hidden absolute left-5 top-6 -translate-x-1/2 z-10
-                          w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all duration-200
-                          ${isSelected
-                            ? "bg-blue-700 border-blue-700 scale-125 shadow-md shadow-blue-200"
-                            : "bg-white border-blue-400 hover:border-blue-600"
-                          }
-                        `}
-                      />
-
-                      {/* Left side (even) or right side (odd) on desktop */}
-                      {/* On mobile everything is a single left-offset column */}
-                      <div
-                        className={`
-                          pl-10 md:pl-0
-                          ${isRight
-                            ? "md:col-start-1 md:text-right md:pr-10"
-                            : "md:col-start-2 md:text-left md:pl-10"
-                          }
-                        `}
-                      >
-                        <article
-                          onClick={() => setSelected(m.id === selected ? "" : m.id)}
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => e.key === "Enter" && setSelected(m.id === selected ? "" : m.id)}
-                          aria-pressed={isSelected}
-                          aria-label={`${m.label}, ${m.date}, ${m.marks} marks`}
-                          className={`
-                            cursor-pointer rounded-2xl border p-5 transition-all duration-200 group
-                            ${isSelected
-                              ? "border-blue-300 bg-blue-50 shadow-md shadow-blue-100"
-                              : "border-slate-200 bg-white hover:border-blue-200 hover:shadow-sm hover:bg-slate-50/50"
-                            }
-                          `}
-                        >
-                          {/* Date */}
-                          <p className={`
-                            text-xs font-bold uppercase tracking-widest mb-1.5 flex items-center gap-1.5 flex-wrap
-                            ${isRight ? "md:justify-end" : "md:justify-start"}
-                            ${isSelected ? "text-blue-600" : "text-slate-400 group-hover:text-blue-400"}
-                          `}>
-                            <IconCalendar />
-                            {m.date}
-                          </p>
-
-                          {/* Title + marks */}
-                          <div className={`flex items-start gap-3 flex-wrap ${isRight ? "md:flex-row-reverse" : ""}`}>
-                            <h3 className={`
-                              text-[1rem] font-bold flex-1 leading-snug
-                              ${isSelected ? "text-blue-800" : "text-slate-900 group-hover:text-blue-800"}
-                            `}>
-                              {m.label}
-                            </h3>
-                            <span className={`
-                              flex-shrink-0 flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-lg
-                              ${isSelected
-                                ? "bg-blue-700 text-white"
-                                : "bg-slate-100 text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-700"
-                              }
-                            `}>
-                              <IconStar />
-                              {m.marks}
-                            </span>
-                          </div>
-
-                          {/* Description */}
-                          {m.description && (
-                            <p className={`
-                              text-xs leading-6 mt-2
-                              ${isSelected ? "text-blue-700" : "text-slate-500"}
-                            `}>
-                              {m.description}
-                            </p>
-                          )}
-                        </article>
-                      </div>
-
-                      {/* Empty cell for the other side on desktop */}
-                      {isRight
-                        ? <div className="hidden md:block md:col-start-2" />
-                        : <div className="hidden md:block md:col-start-1" />
-                      }
-                    </li>
-                  );
-                })}
-              </ol>
-            </div>
-          </div>
+          
         </div>
       </section>
     </main>
