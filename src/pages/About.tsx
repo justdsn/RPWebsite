@@ -82,7 +82,7 @@ function MemberCard({
 
         <div className="min-w-0 text-center sm:text-left">
           <h3 className={`${isSupervisor ? "text-xl" : "text-[1.1rem]"} font-bold text-slate-900 leading-tight`}>{name}</h3>
-          <p className={`${isSupervisor ? "text-sm" : "text-xs"} font-semibold text-blue-600 uppercase tracking-wide mt-1.5`}>{role}</p>
+          <p className={`${isSupervisor ? "text-base" : "text-sm"} font-bold text-blue-600 uppercase tracking-wide mt-1.5`}>{role}</p>
         </div>
       </div>
 
@@ -163,7 +163,7 @@ export default function About() {
         <div className="container-main">
           <h2
             id="supervisors-heading"
-            className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-10 text-center"
+            className="text-xl font-extrabold text-slate-900 uppercase tracking-widest mb-10 text-center"
           >
             Supervisors
           </h2>
@@ -194,7 +194,7 @@ export default function About() {
           {/* Group Members */}
           <h2
             id="team-heading"
-            className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-8 text-center"
+            className="text-xl font-extrabold text-slate-900 uppercase tracking-widest mb-8 text-center"
           >
             Group Members
           </h2>
