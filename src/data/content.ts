@@ -177,20 +177,20 @@ export const documents = [
   {
     id: "proposal-doc",
     title: "Proposal Document",
-    description: "Individual proposal documents of each component.",
+    description: "Individual proposal documents of each component",
     link: "https://drive.google.com/drive/folders/1iKCJsuhjvI3_nLoxUYo0ZOiRcgwEnTLQ?usp=sharing", // TODO: Replace with Google Drive link for Proposal Document
   },
   {
     id: "checklist",
     title: "Check List Documents",
-    description: "Milestone checklists and deliverable tracking documents.",
-    link: "#", // TODO: Replace with Google Drive link for Check List Documents
+    description: "Preliminary Progress Review (PPR) Report",
+    link: "https://drive.google.com/file/d/1ZCEwaxv5SGIGr9MZZjmAIqJ3PqPI1Hhv/view?usp=sharing", // TODO: Replace with Google Drive link for Check List Documents
   },
   {
     id: "final-doc",
     title: "Final Documents",
-    description: "Complete research report, appendices, and supporting documentation.",
-    link: "#", // TODO: Replace with Google Drive link for Final Documents
+    description: "Individual and group final documents",
+    link: "https://drive.google.com/drive/folders/1WD6tNv8xh7K1TFKQAykJNnBetxIkRu9w?usp=sharing", // TODO: Replace with Google Drive link for Final Documents
   },
 ];
 
@@ -198,19 +198,19 @@ export const presentations = [
   {
     id: "proposal-slides",
     title: "Proposal Presentation",
-    description: "Slides presented at the Project Proposal milestone assessment.",
+    description: "Slides presented at the project proposal presentation.",
     link: "#", // TODO: Replace with Google Drive link for Proposal Presentation
   },
   {
     id: "pp1-slides",
     title: "Progress Presentation 1",
-    description: "Slides from the first progress review presented to the panel.",
-    link: "#", // TODO: Replace with Google Drive link for Progress Presentation 1
+    description: "First progress review presented to the panel.",
+    link: "https://drive.google.com/file/d/1nvqJJMnVfa9luYqpxbnVwaHRWvsD2SjI/view?usp=sharing", // TODO: Replace with Google Drive link for Progress Presentation 1
   },
   {
     id: "pp2-slides",
     title: "Progress Presentation 2",
-    description: "Slides from the second progress review covering the integrated prototype.",
+    description: "Second progress review covering the integrated prototype.",
     link: "#", // TODO: Replace with Google Drive link for Progress Presentation 2
   },
   {
@@ -222,37 +222,57 @@ export const presentations = [
 ];
 
 // ─── About Page ───────────────────────────────────────────────────────────────
+// HOW TO UPDATE:
+// - Replace image: "#" with the path to the member's photo, e.g. "/images/member1.jpg"
+//   (put images inside the /public/images/ folder)
+// - Replace linkedin: "#" with the full LinkedIn profile URL
 export const teamMembers = [
   {
     id: "m1",
     name: "Team Member One",
-    role: "Team Member",
+    role: "Group Leader",
     email: "member1@example.ac.lk",
-    focus: "Facial Exposure Detection & ML Pipeline",
+    linkedin: "#", // TODO: Replace with LinkedIn profile URL
+    image: "#",   // TODO: Replace with photo path, e.g. "/images/member1.jpg"
+    faculty: "Faculty of Computing",
+    department: "Information Technology",
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "T1",
   },
   {
     id: "m2",
-    name: "Team Member Two",
-    role: "Team Member",
-    email: "member2@example.ac.lk",
-    focus: "Social Media OSINT & NLP Analysis",
+    name: "Nanayakkara K.A.D.D.S.",
+    role: "Group Member",
+    email: "dhanuka1222@gmail.com",
+    linkedin: "#", // TODO: Replace with LinkedIn profile URL
+    image: "#",   // TODO: Replace with photo path, e.g. "/images/member2.jpg"
+    faculty: "Faculty of Computing",
+    department: "Information Technology",
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "T2",
   },
   {
     id: "m3",
     name: "Team Member Three",
-    role: "Team Member",
+    role: "Group Member",
     email: "member3@example.ac.lk",
-    focus: "Data Breach Analysis & Backend Systems",
+    linkedin: "#", // TODO: Replace with LinkedIn profile URL
+    image: "#",   // TODO: Replace with photo path, e.g. "/images/member3.jpg"
+    faculty: "Faculty of Computing",
+    department: "Information Technology",
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "T3",
   },
   {
     id: "m4",
     name: "Team Member Four",
-    role: "Team Member",
+    role: "Group Member",
     email: "member4@example.ac.lk",
-    focus: "Privacy Compliance Advisor & Frontend",
+    linkedin: "#", // TODO: Replace with LinkedIn profile URL
+    image: "#",   // TODO: Replace with photo path, e.g. "/images/member4.jpg"
+    faculty: "Faculty of Computing",
+    department: "Information Technology",
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "T4",
   },
 ];
@@ -260,16 +280,26 @@ export const teamMembers = [
 export const supervisors = [
   {
     id: "sv1",
-    name: "Supervisor Name",
+    name: "Mr. Kavinga Yapa Abeywardhena",
     role: "Project Supervisor",
-    email: "supervisor@example.ac.lk",
+    email: "kavinga.y@sliit.lk",
+    linkedin: "#", // TODO: Replace with LinkedIn profile URL
+    image: "#",   // TODO: Replace with photo path, e.g. "/images/supervisor1.jpg"
+    faculty: "Faculty of Computing",
+    department: "Information Technology",
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "SV",
   },
   {
     id: "sv2",
-    name: "Co-Supervisor Name",
+    name: "Mr. Kanishka Yapa",
     role: "Co-Supervisor",
-    email: "cosupervisor@example.ac.lk",
+    email: "kanishka.y@sliit.lk",
+    linkedin: "#", // TODO: Replace with LinkedIn profile URL
+    image: "#",   // TODO: Replace with photo path, e.g. "/images/supervisor2.jpg"
+    faculty: "Faculty of Computing",
+    department: "Information Technology",
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "CS",
   },
 ];

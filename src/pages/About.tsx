@@ -1,22 +1,45 @@
 import SectionHeader from "../components/SectionHeader";
 import { teamMembers, supervisors } from "../data/content";
 
+// LinkedIn icon SVG
+const IconLinkedIn = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+  </svg>
+);
+
+// Email icon SVG
+const IconEmail = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="1.8" />
+    <path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+  </svg>
+);
+
 function MemberCard({
   name,
   role,
   email,
-  focus,
+  linkedin,
+  image,
+  faculty,
+  department,
+  university,
   initials,
   isSupervisor = false,
 }: {
   name: string;
   role: string;
   email: string;
-  focus?: string;
+  linkedin: string;
+  image: string;
+  faculty: string;
+  department: string;
+  university: string;
   initials: string;
   isSupervisor?: boolean;
 }) {
-  // Generate a consistent soft color based on initials
+  // Fallback avatar colors based on initials
   const colors = [
     "bg-blue-100 text-blue-700",
     "bg-indigo-100 text-indigo-700",
@@ -28,37 +51,70 @@ function MemberCard({
 
   return (
     <article
-      className={`card flex flex-col items-start gap-4 ${isSupervisor ? "border-blue-200 bg-blue-50/30" : ""
-        }`}
+      className={`card flex flex-col gap-4 ${isSupervisor ? "border-blue-200 bg-blue-50/30" : ""}`}
       aria-label={`${name}, ${role}`}
     >
-      {/* Avatar */}
-      <div
-        aria-hidden="true"
-        className={`w-14 h-14 rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0 ${avatarColor}`}
-      >
-        {initials}
-      </div>
-
-      <div className="flex-1 min-w-0 w-full">
-        <h3 className="text-[0.95rem] font-bold text-slate-900 mb-0.5">{name}</h3>
-        <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">{role}</p>
-
-        {focus && (
-          <p className="text-sm text-slate-500 leading-relaxed mb-3">{focus}</p>
+      {/* Photo or Initials Avatar */}
+      <div className="flex items-center gap-4">
+        {image && image !== "#" ? (
+          <img
+            src={image}
+            alt={`Photo of ${name}`}
+            className="w-16 h-16 rounded-xl object-cover flex-shrink-0 border border-slate-200"
+          />
+        ) : (
+          <div
+            aria-hidden="true"
+            className={`w-16 h-16 rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0 ${avatarColor}`}
+          >
+            {initials}
+          </div>
         )}
 
+        <div className="min-w-0">
+          <h3 className="text-[0.95rem] font-bold text-slate-900 leading-snug">{name}</h3>
+          <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide mt-0.5">{role}</p>
+        </div>
+      </div>
+
+      {/* Academic Info */}
+      <div className="text-xs text-slate-500 space-y-1 border-t border-slate-100 pt-3">
+        <p><span className="font-medium text-slate-700">Faculty:</span> {faculty}</p>
+        <p><span className="font-medium text-slate-700">Department:</span> {department}</p>
+        <p><span className="font-medium text-slate-700">University:</span> {university}</p>
+      </div>
+
+      {/* Contact Links */}
+      <div className="flex flex-col gap-2 border-t border-slate-100 pt-3">
+        {/* Email */}
         <a
           href={`mailto:${email}`}
-          className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-blue-600 transition-colors break-all"
-          aria-label={`Send email to ${name} at ${email}`}
+          className="inline-flex items-center gap-2 text-xs text-slate-500 hover:text-blue-600 transition-colors break-all"
+          aria-label={`Send email to ${name}`}
         >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="flex-shrink-0">
-            <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="1.8" />
-            <path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
+          <IconEmail />
           {email}
         </a>
+
+        {/* LinkedIn */}
+        {linkedin && linkedin !== "#" ? (
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs text-slate-500 hover:text-blue-600 transition-colors"
+            aria-label={`LinkedIn profile of ${name}`}
+          >
+            <IconLinkedIn />
+            LinkedIn Profile
+          </a>
+        ) : (
+          <span className="inline-flex items-center gap-2 text-xs text-slate-400">
+            <IconLinkedIn />
+            {/* TODO: LinkedIn link not added yet */}
+            LinkedIn — coming soon
+          </span>
+        )}
       </div>
     </article>
   );
@@ -101,6 +157,11 @@ export default function About() {
                   name={sv.name}
                   role={sv.role}
                   email={sv.email}
+                  linkedin={sv.linkedin}
+                  image={sv.image}
+                  faculty={sv.faculty}
+                  department={sv.department}
+                  university={sv.university}
                   initials={sv.initials}
                   isSupervisor
                 />
@@ -110,12 +171,12 @@ export default function About() {
 
           <div className="divider mb-16" />
 
-          {/* Team members */}
+          {/* Group Members */}
           <h2
             id="team-heading"
             className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6"
           >
-            Research Team
+            Group Members
           </h2>
           <ul
             role="list"
@@ -127,29 +188,16 @@ export default function About() {
                   name={member.name}
                   role={member.role}
                   email={member.email}
-                  focus={member.focus}
+                  linkedin={member.linkedin}
+                  image={member.image}
+                  faculty={member.faculty}
+                  department={member.department}
+                  university={member.university}
                   initials={member.initials}
                 />
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Affiliations */}
-      <section aria-labelledby="affiliations-heading" className="page-section bg-slate-50/60">
-        <div className="container-main">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2
-              id="affiliations-heading"
-              className="text-xl font-bold text-slate-900 mb-4"
-            >
-              Affiliations
-            </h2>
-            <p className="text-sm text-slate-500 leading-relaxed">
-              This project is conducted under the Faculty of Computing at the Sri Lanka Institute of Information Technology (SLIIT).
-            </p>
-          </div>
         </div>
       </section>
     </main>
