@@ -88,7 +88,7 @@ export default function Contact() {
           <SectionHeader
             tag="Contact Us"
             title="Get in Touch"
-            subtitle="For enquiries or general questions about the FootprintLK project."
+            subtitle="For enquiries or general questions about the FootprintLK project"
             as="h1"
           />
         </div>

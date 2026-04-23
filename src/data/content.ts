@@ -119,46 +119,65 @@ export const milestones = [
     id: "proposal",
     label: "Project Proposal",
     description:
-      "The initial project proposal covers problem identification, scope definition, preliminary literature review, and high-level methodology. Submitted to the research supervisor for formal approval.",
-    date: "March 2025",
-    marks: "TBD",
-    status: "Submitted",
+      "The initial project proposal covers problem identification, scope definition, preliminary literature review, and high-level methodology. Presented to receive funding or get the project approved.",
+    date: "September 2025",
+    marks: 6,
   },
   {
     id: "pp1",
-    label: "Progress Presentation 1",
+    label: "Progress Presentation I",
     description:
-      "First progress presentation demonstrates early-stage implementation of the facial exposure detection module and the social media data collection pipeline. Evaluated by the panel.",
-    date: "May 2025",
-    marks: "TBD",
-    status: "Completed",
+      "Progress Presentation I reviews the 50% completion status of the project. This reveals any gaps or inconsistencies in the design/requirements.",
+    date: "January 2026",
+    marks: 6,
   },
   {
     id: "pp2",
-    label: "Progress Presentation 2",
+    label: "Progress Presentation II",
     description:
-      "Second progress presentation covers the integrated system prototype including data breach analysis, compliance advisor mapping, and initial transliteration module. Evaluated by the panel.",
-    date: "August 2025",
-    marks: "TBD",
-    status: "Upcoming",
+      "Progress Presentation II reviews the 90% completion status demonstration of the project which assesses the project as a whole.",
+    date: "March 2026",
+    marks: 18,
   },
   {
-    id: "final",
-    label: "Final Assessment",
+    id: "website",
+    label: "Website Evaluation",
     description:
-      "Comprehensive evaluation of the complete FootprintLK system. Includes written report, live demonstration, system performance metrics, and full documentation package submission.",
-    date: "November 2025",
-    marks: "TBD",
-    status: "Upcoming",
+      "Website helps to promote the project and reveals all details related to the project.",
+    date: "April 2026",
+    marks: 2,
   },
   {
-    id: "viva",
-    label: "Viva",
+    id: "logbook",
+    label: "Logbook Submission",
     description:
-      "Oral defense before the examination panel covering all aspects of the research: design decisions, implementation challenges, evaluation results, and future work recommendations.",
-    date: "December 2025",
-    marks: "TBD",
-    status: "Upcoming",
+      "Status of the project is validated through the Logbook. This also includes Status documents 1 and 2.",
+    date: "April 2026",
+    marks: 3,
+  },
+  {
+    id: "research-paper",
+    label: "Research Paper",
+    description:
+      "Describes the contribution to existing knowledge, giving due recognition to all work that was referred to in making new knowledge.",
+    date: "May 2026",
+    marks: 10,
+  },
+  {
+    id: "final-report",
+    label: "Final Report",
+    description:
+      "Final Report evaluates the completed project done throughout the year.",
+    date: "May 2026",
+    marks: 19,
+  },
+  {
+    id: "final-viva",
+    label: "Final Presentation & Viva",
+    description:
+      "Oral defense and final demonstration before the examination panel covering all aspects of the research: design decisions, implementation challenges, evaluation results, and future work.",
+    date: "May 2026",
+    marks: 20,
   },
 ];
 
