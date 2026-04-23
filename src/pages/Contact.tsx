@@ -75,22 +75,34 @@ export default function Contact() {
   };
 
   const inputBase =
-    "w-full border rounded-lg px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white";
+    "w-full bg-white border border-slate-200/80 rounded-xl px-4 py-3 text-[15px] text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all duration-300";
 
   return (
     <main id="main-content">
-      {/* Page header */}
+      {/* Premium Page Header */}
       <section
         aria-label="Page header"
-        className="page-header-bg border-b border-slate-100"
+        className="relative overflow-hidden bg-[#FAFAFA] border-b border-slate-200/60"
       >
-        <div className="container-main py-14 lg:py-20">
-          <SectionHeader
-            tag="Contact Us"
-            title="Get in Touch"
-            subtitle="For enquiries or general questions about the FootprintLK project"
-            as="h1"
-          />
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_100%_at_50%_0%,#000_20%,transparent_100%)]"></div>
+        </div>
+        
+        <div className="absolute top-0 right-1/4 w-[30rem] h-[30rem] bg-blue-300/10 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
+
+        <div className="container-main relative z-10 py-20 lg:py-28 text-center max-w-4xl mx-auto flex flex-col items-center">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/80 shadow-sm mb-6">
+            <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-blue-600">
+              Get In Touch
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
+            Connect with our <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">Research Team</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
+            Have questions about FootprintLK? Reach out for enquiries, collaborations, or general information.
+          </p>
         </div>
       </section>
 
@@ -106,23 +118,23 @@ export default function Contact() {
                 Contact information
               </h2>
 
-              <ul role="list" className="flex flex-col gap-4 mb-8">
+              <ul role="list" className="flex flex-col gap-5 mb-10">
                 {contactDetails.map((item, idx) => (
                   <li
                     key={idx}
-                    className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-lg px-4 py-3.5"
+                    className="group relative flex items-start gap-4 bg-white border border-slate-200/60 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
                   >
-                    <div className="mt-0.5">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                       {item.type === "phone" ? <IconPhone /> : <IconEmail />}
                     </div>
-                    <div>
-                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-0.5">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-1">
                         {item.label}
                       </p>
                       {item.type === "email" ? (
                         <a
                           href={`mailto:${item.value}`}
-                          className="text-sm text-blue-700 hover:text-blue-800 transition-colors break-all"
+                          className="text-[15px] font-bold text-slate-800 hover:text-blue-600 transition-colors break-all"
                           aria-label={`Email: ${item.value}`}
                         >
                           {item.value}
@@ -130,7 +142,7 @@ export default function Contact() {
                       ) : (
                         <a
                           href={`tel:${item.value.replace(/\s/g, "")}`}
-                          className="text-sm text-slate-800 hover:text-blue-700 transition-colors"
+                          className="text-[15px] font-bold text-slate-800 hover:text-blue-600 transition-colors"
                           aria-label={`Phone: ${item.value}`}
                         >
                           {item.value}

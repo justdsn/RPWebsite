@@ -60,45 +60,56 @@ function MemberCard({
 
   return (
     <article
-      className={`card flex flex-col gap-5 h-full ${isSupervisor ? "border-blue-200 bg-blue-50/30 p-8" : "p-6"}`}
+      className={`group relative flex flex-col gap-6 h-full p-8 rounded-[2rem] border transition-all duration-500 overflow-hidden ${
+        isSupervisor 
+          ? "bg-white/80 backdrop-blur-md border-blue-200/60 shadow-[0_15px_40px_-15px_rgba(37,99,235,0.15)] hover:shadow-[0_20px_50px_-15px_rgba(37,99,235,0.25)] hover:-translate-y-1" 
+          : "bg-white border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-1 hover:border-slate-200"
+      }`}
       aria-label={`${name}, ${role}`}
     >
-      {/* Photo or Initials Avatar - Larger size, centered layout for better fit */}
-      <div className="flex flex-col sm:flex-row items-center gap-6">
-        {image && image !== "#" ? (
-          <img
-            src={image}
-            alt={`Photo of ${name}`}
-            className={`${isSupervisor ? "w-36 h-36" : "w-40 h-40"} rounded-2xl object-cover flex-shrink-0 border-2 border-white shadow-md ring-1 ring-slate-100`}
-          />
-        ) : (
-          <div
-            aria-hidden="true"
-            className={`${isSupervisor ? "w-36 h-36 text-4xl" : "w-40 h-40 text-4xl"} rounded-2xl flex items-center justify-center font-bold flex-shrink-0 shadow-sm ${avatarColor}`}
-          >
-            {initials}
-          </div>
-        )}
+      {/* Decorative gradient orb */}
+      <div className={`absolute -top-10 -right-10 w-32 h-32 rounded-full blur-[40px] opacity-40 transition-opacity duration-500 group-hover:opacity-80 -z-10 ${
+        isSupervisor ? "bg-blue-400" : "bg-indigo-300"
+      }`} />
 
-        <div className="min-w-0 text-center sm:text-left">
-          <h3 className={`${isSupervisor ? "text-xl" : "text-[1.1rem]"} font-bold text-slate-900 leading-tight`}>{name}</h3>
-          <p className={`${isSupervisor ? "text-sm" : "text-xs"} font-bold text-blue-600 uppercase tracking-wide mt-1.5`}>{role}</p>
+      {/* Photo or Initials Avatar */}
+      <div className="flex flex-col sm:flex-row items-center gap-6">
+        <div className="relative">
+          {image && image !== "#" ? (
+            <img
+              src={image}
+              alt={`Photo of ${name}`}
+              className={`${isSupervisor ? "w-[120px] h-[120px]" : "w-[100px] h-[100px]"} rounded-[1.5rem] object-cover flex-shrink-0 border-4 border-white shadow-lg ring-1 ring-slate-100/50 group-hover:scale-105 transition-transform duration-500`}
+            />
+          ) : (
+            <div
+              aria-hidden="true"
+              className={`${isSupervisor ? "w-[120px] h-[120px] text-4xl" : "w-[100px] h-[100px] text-3xl"} rounded-[1.5rem] flex items-center justify-center font-bold flex-shrink-0 border-4 border-white shadow-lg ring-1 ring-slate-100/50 ${avatarColor} group-hover:scale-105 transition-transform duration-500`}
+            >
+              {initials}
+            </div>
+          )}
+        </div>
+
+        <div className="min-w-0 text-center sm:text-left flex-1">
+          <h3 className={`${isSupervisor ? "text-2xl" : "text-xl"} font-black text-slate-900 leading-tight tracking-tight`}>{name}</h3>
+          <p className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 uppercase tracking-widest mt-2">{role}</p>
         </div>
       </div>
 
       {/* Academic Info */}
-      <div className={`${isSupervisor ? "text-[0.95rem]" : "text-[0.88rem]"} text-slate-500 space-y-2 border-t border-slate-100 pt-5 flex-grow`}>
+      <div className="text-[0.9rem] text-slate-600 space-y-2.5 border-t border-slate-100 pt-6 flex-grow font-medium">
         <p className="font-bold text-slate-800 leading-snug">{university}</p>
-        <p><span className="font-semibold text-slate-700">Faculty:</span> {faculty}</p>
-        <p><span className="font-semibold text-slate-700">Department:</span> {department}</p>
+        <p className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" /><span className="text-slate-500 font-semibold w-24 flex-shrink-0">Faculty</span> <span className="text-slate-800">{faculty}</span></p>
+        <p className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" /><span className="text-slate-500 font-semibold w-24 flex-shrink-0">Department</span> <span className="text-slate-800">{department}</span></p>
       </div>
 
-      {/* Contact Links - Parallel layout */}
-      <div className="flex items-center justify-between gap-4 border-t border-slate-100 pt-4">
+      {/* Contact Links */}
+      <div className="flex items-center justify-between gap-4 border-t border-slate-100 pt-5 mt-2">
         {/* Email */}
         <a
           href={`mailto:${email}`}
-          className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors truncate"
+          className="inline-flex items-center gap-2 text-[13px] font-bold text-slate-500 hover:text-blue-600 transition-colors truncate px-3 py-1.5 -ml-3 rounded-lg hover:bg-blue-50/50"
           title={email}
           aria-label={`Send email to ${name}`}
         >
@@ -112,7 +123,7 @@ function MemberCard({
             href={scholar}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 text-[13px] font-bold text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0 px-3 py-1.5 -mr-3 rounded-lg hover:bg-blue-50/50"
             aria-label={`Google Scholar profile of ${name}`}
           >
             <IconScholar />
@@ -123,14 +134,14 @@ function MemberCard({
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 text-[13px] font-bold text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0 px-3 py-1.5 -mr-3 rounded-lg hover:bg-blue-50/50"
             aria-label={`LinkedIn profile of ${name}`}
           >
             <IconLinkedIn />
             LinkedIn
           </a>
         ) : !scholar && (
-          <span className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 flex-shrink-0" title="Coming soon">
+          <span className="inline-flex items-center gap-2 text-[13px] font-bold text-slate-400 flex-shrink-0 px-3 py-1.5 -mr-3 cursor-not-allowed" title="Coming soon">
             <IconLinkedIn />
             LinkedIn
           </span>
@@ -143,18 +154,30 @@ function MemberCard({
 export default function About() {
   return (
     <main id="main-content">
-      {/* Page header */}
+      {/* Premium Page Header */}
       <section
         aria-label="Page header"
-        className="page-header-bg border-b border-slate-100"
+        className="relative overflow-hidden bg-[#FAFAFA] border-b border-slate-200/60"
       >
-        <div className="container-main py-14 lg:py-20 text-left">
-          <SectionHeader
-            tag="About Us"
-            title="The Team Behind FootprintLK"
-            subtitle="FootprintLK is a collaborative project developed with a shared focus on digital privacy, OSINT, and citizen empowerment in Sri Lanka."
-            as="h1"
-          />
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_100%_at_50%_0%,#000_20%,transparent_100%)]"></div>
+        </div>
+        
+        <div className="absolute top-0 right-1/4 w-[30rem] h-[30rem] bg-indigo-300/10 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
+
+        <div className="container-main relative z-10 py-20 lg:py-28 text-center max-w-4xl mx-auto flex flex-col items-center">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/80 shadow-sm mb-6">
+            <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-blue-600">
+              The Team
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
+            Meet the minds behind <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">FootprintLK</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
+            A collaborative research project developed with a shared focus on digital privacy, OSINT, and citizen empowerment in Sri Lanka.
+          </p>
         </div>
       </section>
 

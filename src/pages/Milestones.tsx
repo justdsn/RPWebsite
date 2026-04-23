@@ -23,18 +23,29 @@ export default function Milestones() {
 
   return (
     <main id="main-content">
-      {/* Page header */}
+      {/* Premium Page Header */}
       <section
         aria-label="Page header"
-        className="page-header-bg border-b border-slate-100"
+        className="relative overflow-hidden bg-[#FAFAFA] border-b border-slate-200/60"
       >
-        <div className="container-main py-14 lg:py-20">
-          <SectionHeader
-            tag="Project Milestones"
-            title="Assessments & Deliverables"
-            subtitle="Select an assessment from the dropdown to view its description, scheduled date, and marks allocated"
-            as="h1"
-          />
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_100%_at_50%_0%,#000_20%,transparent_100%)]"></div>
+        </div>
+        
+        <div className="absolute top-0 right-1/4 w-[30rem] h-[30rem] bg-blue-300/10 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
+
+        <div className="container-main relative z-10 py-20 lg:py-28 text-center max-w-4xl mx-auto flex flex-col items-center">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/80 shadow-sm mb-6">
+            <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-blue-600">
+              Deliverables
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
+            Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">Milestones</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
+            Select an assessment from the dropdown to view its detailed description, scheduled timeline, and evaluation metrics.
+          </p>
         </div>
       </section>
 
@@ -79,31 +90,33 @@ export default function Milestones() {
             {current ? (
               <article
                 aria-label={`Details for ${current.label}`}
-                className="card border-blue-200 shadow-sm"
+                className="relative bg-white/80 backdrop-blur-md border border-slate-200/60 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] rounded-[2rem] p-8 sm:p-10 overflow-hidden animate-fade-in-up"
               >
-                <div className="flex items-start justify-between gap-4 flex-wrap mb-4">
-                  <h2 className="text-xl font-bold text-slate-900">{current.label}</h2>
+                <div className="absolute top-0 right-0 w-[20rem] h-[20rem] bg-gradient-to-br from-blue-50 to-indigo-50/50 rounded-full blur-[40px] -z-10 transform translate-x-1/3 -translate-y-1/3" />
+
+                <div className="flex items-start justify-between gap-4 flex-wrap mb-6">
+                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{current.label}</h2>
                 </div>
 
-                <p className="text-sm text-slate-600 leading-7 mb-6">
+                <p className="text-[1.05rem] text-slate-600 leading-relaxed mb-10 font-medium">
                   {current.description}
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="bg-slate-50 border border-slate-200 rounded-lg px-4 py-3.5">
-                    <div className="flex items-center gap-2 text-slate-500 text-xs font-semibold uppercase tracking-wide mb-1.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="bg-slate-50/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-5 hover:bg-white hover:shadow-md hover:border-blue-200/50 transition-all duration-300">
+                    <div className="flex items-center gap-2.5 text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">
                       <IconCalendar />
                       Scheduled Date
                     </div>
-                    <p className="text-slate-800 font-semibold text-sm">{current.date}</p>
+                    <p className="text-slate-800 font-black text-lg">{current.date}</p>
                   </div>
 
-                  <div className="bg-slate-50 border border-slate-200 rounded-lg px-4 py-3.5">
-                    <div className="flex items-center gap-2 text-slate-500 text-xs font-semibold uppercase tracking-wide mb-1.5">
+                  <div className="bg-slate-50/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-5 hover:bg-white hover:shadow-md hover:border-blue-200/50 transition-all duration-300">
+                    <div className="flex items-center gap-2.5 text-indigo-600 text-xs font-bold uppercase tracking-widest mb-2">
                       <IconMark />
                       Marks Allocated
                     </div>
-                    <p className="text-slate-800 font-semibold text-sm">{current.marks}</p>
+                    <p className="text-slate-800 font-black text-lg">{current.marks} Marks</p>
                   </div>
                 </div>
               </article>

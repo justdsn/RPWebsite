@@ -9,20 +9,29 @@ const iconMap: Record<string, React.ElementType> = {
 export default function Scope() {
   return (
     <main id="main-content" className="bg-slate-50 min-h-screen">
-      {/* Page header */}
+      {/* Premium Page Header */}
       <section
         aria-label="Page header"
-        className="relative overflow-hidden pt-20 pb-16 lg:pt-32 lg:pb-24"
+        className="relative overflow-hidden bg-[#FAFAFA] border-b border-slate-200/60"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-indigo-600/5 -z-10" />
-        <div className="container-main">
-          <SectionHeader
-            tag="Strategic Blueprint"
-            title="Project Scope"
-            subtitle="Defining the boundaries, objectives, and methodologies of our digital footprint research."
-            as="h1"
-            className="text-center"
-          />
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_100%_at_50%_0%,#000_20%,transparent_100%)]"></div>
+        </div>
+        
+        <div className="absolute top-0 right-1/4 w-[30rem] h-[30rem] bg-blue-300/10 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
+
+        <div className="container-main relative z-10 py-20 lg:py-28 text-center max-w-4xl mx-auto flex flex-col items-center">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/80 shadow-sm mb-6">
+            <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-blue-600">
+              Strategic Blueprint
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
+            Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">Scope</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
+            Defining the boundaries, objectives, and methodologies of our digital footprint research.
+          </p>
         </div>
       </section>
 
