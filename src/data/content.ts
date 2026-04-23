@@ -234,9 +234,9 @@ export const teamMembers = [
     email: "member1@example.ac.lk",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/member1.jpg"
-    faculty: "Faculty of Computing",
-    department: "Information Technology",
     university: "Sri Lanka Institute of Information Technology (SLIIT)",
+    faculty: "Faculty of Computing",
+    department: "Computer Systems Engineering",
     initials: "T1",
   },
   {
