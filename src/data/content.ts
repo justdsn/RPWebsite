@@ -307,23 +307,8 @@ export const supervisors = [
 // ─── Contact Page ─────────────────────────────────────────────────────────────
 export const contactDetails = [
   {
-    type: "phone",
-    label: "Primary Contact",
-    value: "+94 XX XXX XXXX",
-  },
-  {
-    type: "phone",
-    label: "Secondary Contact",
-    value: "+94 XX XXX XXXX",
-  },
-  {
     type: "email",
-    label: "Research Enquiries",
-    value: "research@footprintlk.example.ac.lk",
-  },
-  {
-    type: "email",
-    label: "General Contact",
-    value: "info@footprintlk.example.ac.lk",
+    label: "General Enquiries",
+    value: "footprintlk.info@gmail.com",
   },
 ];

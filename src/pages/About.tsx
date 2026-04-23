@@ -82,7 +82,7 @@ function MemberCard({
 
         <div className="min-w-0 text-center sm:text-left">
           <h3 className={`${isSupervisor ? "text-xl" : "text-[1.1rem]"} font-bold text-slate-900 leading-tight`}>{name}</h3>
-          <p className={`${isSupervisor ? "text-base" : "text-sm"} font-bold text-blue-600 uppercase tracking-wide mt-1.5`}>{role}</p>
+          <p className={`${isSupervisor ? "text-sm" : "text-xs"} font-bold text-blue-600 uppercase tracking-wide mt-1.5`}>{role}</p>
         </div>
       </div>
 
