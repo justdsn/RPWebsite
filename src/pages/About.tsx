@@ -63,34 +63,34 @@ function MemberCard({
       className={`card flex flex-col gap-5 h-full ${isSupervisor ? "border-blue-200 bg-blue-50/30 p-8" : "p-6"}`}
       aria-label={`${name}, ${role}`}
     >
-      {/* Photo or Initials Avatar */}
-      <div className="flex items-center gap-5">
+      {/* Photo or Initials Avatar - Larger size, centered layout for better fit */}
+      <div className="flex flex-col sm:flex-row items-center gap-6">
         {image && image !== "#" ? (
           <img
             src={image}
             alt={`Photo of ${name}`}
-            className={`${isSupervisor ? "w-24 h-24" : "w-20 h-20"} rounded-xl object-cover flex-shrink-0 border border-slate-200 shadow-sm`}
+            className={`${isSupervisor ? "w-32 h-32" : "w-28 h-28"} rounded-2xl object-cover flex-shrink-0 border-2 border-white shadow-md ring-1 ring-slate-100`}
           />
         ) : (
           <div
             aria-hidden="true"
-            className={`${isSupervisor ? "w-24 h-24 text-2xl" : "w-20 h-20 text-xl"} rounded-xl flex items-center justify-center font-bold flex-shrink-0 ${avatarColor}`}
+            className={`${isSupervisor ? "w-32 h-32 text-3xl" : "w-28 h-28 text-2xl"} rounded-2xl flex items-center justify-center font-bold flex-shrink-0 shadow-sm ${avatarColor}`}
           >
             {initials}
           </div>
         )}
 
-        <div className="min-w-0">
-          <h3 className={`${isSupervisor ? "text-lg" : "text-[1rem]"} font-bold text-slate-900 leading-tight`}>{name}</h3>
-          <p className={`${isSupervisor ? "text-sm" : "text-xs"} font-semibold text-blue-600 uppercase tracking-wide mt-1`}>{role}</p>
+        <div className="min-w-0 text-center sm:text-left">
+          <h3 className={`${isSupervisor ? "text-xl" : "text-[1.1rem]"} font-bold text-slate-900 leading-tight`}>{name}</h3>
+          <p className={`${isSupervisor ? "text-sm" : "text-xs"} font-semibold text-blue-600 uppercase tracking-wide mt-1.5`}>{role}</p>
         </div>
       </div>
 
       {/* Academic Info */}
-      <div className={`${isSupervisor ? "text-[0.9rem]" : "text-[0.85rem]"} text-slate-500 space-y-1.5 border-t border-slate-100 pt-4 flex-grow`}>
-        <p className="font-medium text-slate-800">{university}</p>
-        <p><span className="font-medium text-slate-700">Faculty:</span> {faculty}</p>
-        <p><span className="font-medium text-slate-700">Department:</span> {department}</p>
+      <div className={`${isSupervisor ? "text-[0.95rem]" : "text-[0.88rem]"} text-slate-500 space-y-2 border-t border-slate-100 pt-5 flex-grow`}>
+        <p className="font-bold text-slate-800 leading-snug">{university}</p>
+        <p><span className="font-semibold text-slate-700">Faculty:</span> {faculty}</p>
+        <p><span className="font-semibold text-slate-700">Department:</span> {department}</p>
       </div>
 
       {/* Contact Links - Parallel layout */}
@@ -98,7 +98,7 @@ function MemberCard({
         {/* Email */}
         <a
           href={`mailto:${email}`}
-          className="inline-flex items-center gap-2 text-xs font-medium text-slate-500 hover:text-blue-600 transition-colors truncate"
+          className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors truncate"
           title={email}
           aria-label={`Send email to ${name}`}
         >
@@ -112,7 +112,7 @@ function MemberCard({
             href={scholar}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-medium text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
             aria-label={`Google Scholar profile of ${name}`}
           >
             <IconScholar />
@@ -123,14 +123,14 @@ function MemberCard({
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-medium text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
             aria-label={`LinkedIn profile of ${name}`}
           >
             <IconLinkedIn />
             LinkedIn
           </a>
         ) : !scholar && (
-          <span className="inline-flex items-center gap-2 text-xs font-medium text-slate-400 flex-shrink-0" title="Coming soon">
+          <span className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 flex-shrink-0" title="Coming soon">
             <IconLinkedIn />
             LinkedIn
           </span>
@@ -172,7 +172,7 @@ export default function About() {
             className="flex flex-wrap justify-center gap-8 mb-20"
           >
             {supervisors.map((sv) => (
-              <li key={sv.id} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(40%-2rem)] max-w-lg">
+              <li key={sv.id} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(45%-2rem)] max-w-xl">
                 <MemberCard
                   name={sv.name}
                   role={sv.role}
