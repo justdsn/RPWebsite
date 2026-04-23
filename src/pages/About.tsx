@@ -169,7 +169,7 @@ export default function About() {
           </h2>
           <ul
             role="list"
-            className="flex flex-wrap justify-center gap-8 mb-8"
+            className="flex flex-wrap justify-center gap-8 mb-16"
           >
             {supervisors.map((sv) => (
               <li key={sv.id} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(45%-2rem)] max-w-xl">
@@ -189,12 +189,12 @@ export default function About() {
             ))}
           </ul>
 
-          <div className="divider mb-8" />
+          <div className="divider mb-16" />
 
           {/* Group Members */}
           <h2
             id="team-heading"
-            className="text-xl font-extrabold text-slate-900 uppercase tracking-widest mb-8 text-center"
+            className="text-xl font-extrabold text-slate-900 uppercase tracking-widest mb-10 text-center"
           >
             Group Members
           </h2>
