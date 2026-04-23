@@ -69,12 +69,12 @@ function MemberCard({
           <img
             src={image}
             alt={`Photo of ${name}`}
-            className={`${isSupervisor ? "w-36 h-36" : "w-32 h-32"} rounded-2xl object-cover flex-shrink-0 border-2 border-white shadow-md ring-1 ring-slate-100`}
+            className={`${isSupervisor ? "w-36 h-36" : "w-40 h-40"} rounded-2xl object-cover flex-shrink-0 border-2 border-white shadow-md ring-1 ring-slate-100`}
           />
         ) : (
           <div
             aria-hidden="true"
-            className={`${isSupervisor ? "w-36 h-36 text-4xl" : "w-32 h-32 text-3xl"} rounded-2xl flex items-center justify-center font-bold flex-shrink-0 shadow-sm ${avatarColor}`}
+            className={`${isSupervisor ? "w-36 h-36 text-4xl" : "w-40 h-40 text-4xl"} rounded-2xl flex items-center justify-center font-bold flex-shrink-0 shadow-sm ${avatarColor}`}
           >
             {initials}
           </div>
@@ -169,7 +169,7 @@ export default function About() {
           </h2>
           <ul
             role="list"
-            className="flex flex-wrap justify-center gap-8 mb-20"
+            className="flex flex-wrap justify-center gap-8 mb-8"
           >
             {supervisors.map((sv) => (
               <li key={sv.id} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(45%-2rem)] max-w-xl">
@@ -189,12 +189,12 @@ export default function About() {
             ))}
           </ul>
 
-          <div className="divider mb-20" />
+          <div className="divider mb-8" />
 
           {/* Group Members */}
           <h2
             id="team-heading"
-            className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-10 text-center"
+            className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-8 text-center"
           >
             Group Members
           </h2>
