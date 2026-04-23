@@ -50,60 +50,102 @@ const capabilityIcons = [
 export default function Home() {
   return (
     <main id="main-content">
-      {/* ─── Hero ─────────────────────────────────────────────── */}
+      {/* ─── Premium Hero ─────────────────────────────────────────────── */}
       <section
         aria-label="Project introduction"
-        className="relative hero-bg overflow-hidden"
+        className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#FAFAFA]"
       >
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 60% at 60% 40%, rgba(219,234,254,0.45) 0%, transparent 70%)",
-          }}
-        />
-        <div className="container-main relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 lg:py-28">
-            {/* Text */}
-            <div>
-              <span className="section-tag" aria-label="Category">
-                Privacy + OSINT Research - Sri Lanka
-              </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mt-4 mb-6">
-                FootprintLK:{" "}
-                <span className="text-blue-700">Privacy-first</span> digital
-                footprint intelligence for Sri Lankan users
+        {/* Modern grid background */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_20%,transparent_100%)]"></div>
+        </div>
+
+        {/* Ambient Blur Glows */}
+        <div className="absolute top-0 right-0 lg:right-1/4 w-[30rem] lg:w-[45rem] h-[30rem] lg:h-[45rem] bg-blue-300/20 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
+        <div className="absolute bottom-0 left-0 lg:left-1/4 w-[25rem] lg:w-[35rem] h-[25rem] lg:h-[35rem] bg-indigo-300/20 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
+
+        <div className="container-main relative z-10 pt-24 pb-16 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-7 flex flex-col items-start pt-10 lg:pt-0">
+              
+
+              {/* Bold Typography */}
+              <h1 className="text-[2.5rem] sm:text-5xl lg:text-[4.2rem] font-black text-slate-900 leading-[1.05] tracking-tight mb-6">
+                Uncover your <br className="hidden sm:block" />
+                <span className="relative inline-block mt-2">
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-100 to-indigo-100 transform -skew-y-2 rounded-lg -z-10"></span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">digital footprint</span>
+                </span>
               </h1>
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
-                Sri Lanka's rapid social media growth exposes citizens to identity
-                theft, impersonation, phishing, and PII leakage, often without
-                their awareness. FootprintLK is a research-driven system designed
-                to surface what is publicly exposed and help users understand their
-                digital footprint.
+              
+              {/* Refined Paragraph */}
+              <p className="text-slate-600 text-[1.05rem] sm:text-xl leading-relaxed mb-10 max-w-[90%] lg:max-w-xl font-medium">
+                FootprintLK empowers Sri Lankan citizens with a unified intelligence system to detect, analyze, and mitigate personal exposure across breaches, social media, and facial data.
               </p>
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                Built with PDPA 2022 principles in mind and designed to handle
-                Sinhala, English, and romanized transliteration variants, closing
-                a critical gap for Sri Lankan identity analysis.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/scope" className="btn-primary">
-                  Explore Scope
-                  <IconArrow />
+
+              {/* Sophisticated Actions */}
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Link 
+                  to="/scope" 
+                  className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-[1.25rem] overflow-hidden font-semibold transition-all duration-300 hover:shadow-[0_15px_30px_-10px_rgba(15,23,42,0.4)] hover:-translate-y-0.5 active:scale-95"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="relative z-10 flex items-center gap-2">
+                    Explore Platform Scope
+                    <IconArrow />
+                  </span>
                 </Link>
-                <Link to="/downloads" className="btn-secondary">
+                
+                <Link 
+                  to="/downloads" 
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-700 border border-slate-200/80 rounded-[1.25rem] font-semibold transition-all duration-300 hover:bg-white hover:border-slate-300 hover:text-slate-900 hover:-translate-y-0.5 hover:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.05)] active:scale-95"
+                >
                   View Downloads
-                  <IconArrow />
                 </Link>
               </div>
-              {/* PDPA note */}
 
             </div>
 
-            {/* Illustration */}
-            <div aria-hidden="true" className="hidden lg:flex justify-center items-center">
-              <HeroIllustration />
+            {/* Right Visuals - 3D/Glassmorphic Frame */}
+            <div aria-hidden="true" className="lg:col-span-5 hidden lg:flex justify-end items-center relative" style={{ perspective: '1000px' }}>
+               <div className="relative w-full max-w-lg aspect-[4/3] sm:aspect-square transform-gpu transition-all duration-700 hover:rotate-y-[-5deg] hover:rotate-x-[2deg]">
+                 
+                 {/* Deep offset shadow / decorative layer */}
+                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-600/20 rounded-[2.5rem] transform rotate-3 translate-x-4 translate-y-4 blur-sm -z-20 transition-transform duration-700" />
+                 
+                 {/* Solid architectural layer */}
+                 <div className="absolute inset-0 bg-white rounded-[2.5rem] shadow-2xl -z-10" />
+
+                 {/* Main glass container */}
+                 <div className="relative w-full h-full bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-2xl rounded-[2.5rem] border border-white/80 shadow-[inset_0_1px_1px_rgba(255,255,255,1)] flex justify-center items-center overflow-hidden">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(219,234,254,0.5),transparent_50%)]" />
+                    <HeroIllustration />
+                 </div>
+
+                 {/* Floating UI Elements */}
+                 <div className="absolute top-8 -left-8 bg-white/90 backdrop-blur-md p-3.5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100/50 flex items-center gap-3 transition-transform hover:-translate-y-2 duration-300 cursor-default">
+                    <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-500 text-white rounded-xl flex items-center justify-center shadow-inner">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div className="flex flex-col pr-2">
+                      <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Exposure</span>
+                      <span className="text-[13px] font-bold text-slate-800 leading-none">Mitigated</span>
+                    </div>
+                 </div>
+
+                 <div className="absolute bottom-10 -right-6 bg-white/90 backdrop-blur-md p-3.5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100/50 flex items-center gap-3 transition-transform hover:-translate-y-2 duration-300 cursor-default">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-xl flex items-center justify-center shadow-inner">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <div className="flex flex-col pr-2">
+                      <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">OSINT AI</span>
+                      <span className="text-[13px] font-bold text-slate-800 leading-none">Scanning</span>
+                    </div>
+                 </div>
+                 
+               </div>
             </div>
           </div>
         </div>
