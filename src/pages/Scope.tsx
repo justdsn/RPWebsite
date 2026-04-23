@@ -158,6 +158,53 @@ export default function Scope() {
                           </div>
                         </div>
                       )}
+
+                      {section.techStack && (
+                        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                          {section.techStack.map((category: any, catIdx: number) => (
+                            <div 
+                              key={catIdx} 
+                              className={`relative group bg-white/70 backdrop-blur-md p-8 rounded-[2rem] border border-slate-200/60 shadow-xl shadow-slate-200/20 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200/50 transition-all duration-500 ${
+                                catIdx === 0 ? "md:col-span-2 lg:col-span-1" : ""
+                              }`}
+                            >
+                              {/* Decorative element */}
+                              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 -z-10" />
+                              
+                              <h4 className="text-xl font-black text-slate-900 mb-8 flex items-center gap-3">
+                                <span className="w-1.5 h-6 bg-blue-600 rounded-full shadow-[0_0_10px_rgba(37,99,235,0.4)]" />
+                                {category.category}
+                              </h4>
+                              
+                              <div className="flex flex-wrap gap-5">
+                                {category.items.map((tech: any, techIdx: number) => (
+                                  <div 
+                                    key={techIdx} 
+                                    className="group/item flex flex-col items-center gap-3"
+                                  >
+                                    <div className="w-16 h-16 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-3.5 transition-all duration-300 group-hover/item:-translate-y-2 group-hover/item:shadow-lg group-hover/item:border-blue-200 group-hover/item:bg-gradient-to-b group-hover/item:from-white group-hover/item:to-blue-50/30">
+                                      {tech.logo ? (
+                                        <img 
+                                          src={tech.logo} 
+                                          alt={tech.name} 
+                                          className="w-full h-full object-contain filter group-hover/item:brightness-110 transition-all" 
+                                        />
+                                      ) : (
+                                        <div className="w-full h-full bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center font-black text-xl">
+                                          {tech.name.charAt(0)}
+                                        </div>
+                                      )}
+                                    </div>
+                                    <span className="text-[13px] font-bold text-slate-500 group-hover/item:text-blue-600 transition-colors text-center leading-tight">
+                                      {tech.name}
+                                    </span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

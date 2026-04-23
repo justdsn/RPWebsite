@@ -79,15 +79,13 @@ export const scopeSections = [
     id: "literature-survey",
     title: "Literature Survey",
     content:
-      "The current literature shows that digital privacy tools are highly fragmented, with most solutions focusing on single aspects such as data breach detection, social media analysis, facial recognition, or legal compliance rather than offering an integrated approach. <br>Tools like HaveIBeenPwned provide simple breach lookups without contextual risk analysis, while OSINT platforms such as Maltego and Sherlock require technical expertise and lack localization for regions like Sri Lanka. Similarly, NLP and transliteration tools do not effectively support Sinhala language variations, limiting accurate social media analysis. Facial recognition systems, including PimEyes and TinEye, raise privacy concerns due to external data storage and lack regional focus, while research-level models are not user-friendly. Legal compliance platforms are either enterprise-focused or lack reliable, jurisdiction-specific guidance for individuals. Overall, existing solutions fail to combine multi-modal privacy detection with accessible, localized legal advisory, highlighting a significant limitation in addressing comprehensive digital privacy risks.",
-    image: "/images/scope/literature_survey.png",
+      "A comprehensive review of existing literature shows that the digital privacy landscape is currently highly fragmented. Most existing solutions are designed to address single aspects of privacy exposure, such as data breach detection, social media analysis, or facial recognition, rather than offering a holistic and integrated perspective. For instance, platforms like HaveIBeenPwned provide valuable breach data but lack the contextual analysis needed to understand how that data impacts a user's overall digital footprint. Similarly, OSINT tools like Maltego and Sherlock offer powerful data collection capabilities but are often too complex for non-technical users to interpret effectively. <br>Furthermore, many research-level models for facial recognition and NLP are not user-friendly and often raise significant privacy concerns themselves by requiring data to be processed on external servers. There is also a notable absence of regional focus in these tools; most are optimized for Western naming conventions and English-centric datasets. This leaves a significant portion of the global population, particularly in regions like Sri Lanka, without localized tools that understand their language, transliteration nuances, and unique digital usage patterns. <br>Finally, the bridge between technical detection and legal compliance remains underdeveloped. While advanced detection mechanisms exist, they rarely provide users with actionable guidance that maps their exposure to specific legal frameworks or rights. This fragmentation prevents individuals from obtaining a clear, unified understanding of their digital risks, highlighting a critical need for integrated systems that combine multi-modal detection with localized, accessible advisory services.",
   },
   {
     id: "research-gap",
     title: "Research Gap",
     content:
-      "The analysis of existing literature reveals a significant gap in the lack of a unified, user-centric platform that integrates multiple dimensions of digital privacy exposure into a single system. Current solutions operate in isolation, focusing separately on data breaches, social media monitoring, facial recognition, or legal compliance, without providing a comprehensive view of an individual’s overall privacy risk. Additionally, there is a clear absence of localization, particularly for Sri Lanka, where existing tools fail to support Sinhala language processing, local naming conventions, and region-specific data sources. <br> Another critical gap lies in the lack of automated, explainable legal guidance, as most platforms either do not include legal context or require expert knowledge to interpret results. Furthermore, many existing systems raise privacy concerns by storing sensitive user data, especially biometric information, instead of adopting privacy-preserving approaches. Therefore, there is a need for an integrated, privacy-first, and locally adapted solution that not only detects multi-source privacy exposures but also translates them into actionable, legally grounded insights for non-expert users.",
-    image: "/images/scope/research_gap.png",
+      "The primary research gap identified in this study is the lack of a unified, user-centric platform that integrates multiple dimensions of digital privacy exposure into a single, cohesive ecosystem. Current solutions operate in isolated silos, meaning a user must consult multiple disparate platforms to understand their risks across breaches, social media, and image exposure. There is no existing framework that effectively correlates these multi-modal data points to generate a unified privacy risk score or a comprehensive 'digital footprint' profile for the user. <br>Another significant gap is the lack of localization for the Sri Lankan context. Existing privacy tools fail to support Sinhala language processing, local naming conventions, and region-specific data sources. This inaccuracy in processing local data leads to a higher rate of false negatives or missed exposures for Sri Lankan users. Additionally, there is a clear absence of automated, explainable legal guidance within these platforms. Most tools provide raw technical data without explaining how those findings relate to local regulations, such as the Sri Lankan Personal Data Protection Act (PDPA) No. 9 of 2022. <br>Furthermore, the architectural approach to privacy in many existing tools is often contradictory, as they frequently store sensitive biometric or personal information on external servers during the analysis process. This creates an additional layer of risk for the user. Therefore, there is a clear research need for a privacy-first, locally adapted solution that not only detects multi-source privacy exposures but also translates them into actionable, legally grounded insights through a zero-persistence analysis pipeline.",
   },
   {
     id: "research-problem",
@@ -129,8 +127,40 @@ export const scopeSections = [
   {
     id: "technologies",
     title: "Technologies Used",
-
-
+    techStack: [
+      {
+        category: "Frontend, Backend & Infrastructure",
+        items: [
+          { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+          { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+          { name: "FastAPI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" },
+          { name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
+          { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+          { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+          { name: "Nginx", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" },
+        ]
+      },
+      {
+        category: "AI, Machine Learning & Data Processing",
+        items: [
+          { name: "spaCy", logo: "https://cdn.simpleicons.org/spacy" },
+          { name: "SBERT", logo: "https://cdn.simpleicons.org/huggingface" },
+          { name: "Regex", logo: "" },
+          { name: "MTCNN", logo: "" },
+          { name: "FaceNet", logo: "" },
+          { name: "FAISS", logo: "https://cdn.simpleicons.org/meta" },
+          { name: "DBSCAN", logo: "" },
+        ]
+      },
+      {
+        category: "Data Collection & Storage",
+        items: [
+          { name: "Playwright", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" },
+          { name: "Indic NLP Library", logo: "" },
+          { name: "SQLite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" },
+        ]
+      }
+    ]
   },
 ];
 
@@ -239,13 +269,13 @@ export const presentations = [
     id: "proposal-slides",
     title: "Proposal Presentation",
     description: "Slides presented at the project proposal presentation.",
-    link: "#", // TODO: Replace with Google Drive link for Proposal Presentation
+    link: "https://drive.google.com/file/d/1nvqJJMnVfa9luYqpxbnVwaHRWvsD2SjI/view?usp=sharing", // TODO: Replace with Google Drive link for Proposal Presentation
   },
   {
     id: "pp1-slides",
     title: "Progress Presentation 1",
     description: "First progress review presented to the panel.",
-    link: "https://drive.google.com/file/d/1nvqJJMnVfa9luYqpxbnVwaHRWvsD2SjI/view?usp=sharing", // TODO: Replace with Google Drive link for Progress Presentation 1
+    link: "https://drive.google.com/file/d/1TRkVJ7yxC_9q0DfekgIiAd1f1wdKwbMW/view?usp=sharing", // TODO: Replace with Google Drive link for Progress Presentation 1
   },
   {
     id: "pp2-slides",
