@@ -245,7 +245,7 @@ export const teamMembers = [
     role: "Group Member",
     email: "dhanuka1222@gmail.com",
     linkedin: "https://www.linkedin.com/in/dhanukasn/", // TODO: Replace with LinkedIn profile URL
-    image: "/images/m2.jpg",   // TODO: Replace with photo path, e.g. "/images/member2.jpg"
+    image: "/images/m2.jpeg",   // TODO: Replace with photo path, e.g. "/images/member2.jpg"
     university: "Sri Lanka Institute of Information Technology",
     faculty: "Faculty of Computing",
     department: "Computer Systems Engineering",
