@@ -51,45 +51,45 @@ function MemberCard({
 
   return (
     <article
-      className={`card flex flex-col gap-4 h-full ${isSupervisor ? "border-blue-200 bg-blue-50/30" : ""}`}
+      className={`card flex flex-col gap-5 h-full ${isSupervisor ? "border-blue-200 bg-blue-50/30 p-8" : "p-6"}`}
       aria-label={`${name}, ${role}`}
     >
       {/* Photo or Initials Avatar */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-5">
         {image && image !== "#" ? (
           <img
             src={image}
             alt={`Photo of ${name}`}
-            className="w-16 h-16 rounded-xl object-cover flex-shrink-0 border border-slate-200"
+            className={`${isSupervisor ? "w-20 h-20" : "w-16 h-16"} rounded-xl object-cover flex-shrink-0 border border-slate-200 shadow-sm`}
           />
         ) : (
           <div
             aria-hidden="true"
-            className={`w-16 h-16 rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0 ${avatarColor}`}
+            className={`${isSupervisor ? "w-20 h-20 text-xl" : "w-16 h-16 text-lg"} rounded-xl flex items-center justify-center font-bold flex-shrink-0 ${avatarColor}`}
           >
             {initials}
           </div>
         )}
 
         <div className="min-w-0">
-          <h3 className="text-[0.95rem] font-bold text-slate-900 leading-snug truncate">{name}</h3>
-          <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide mt-0.5">{role}</p>
+          <h3 className={`${isSupervisor ? "text-lg" : "text-[1rem]"} font-bold text-slate-900 leading-tight`}>{name}</h3>
+          <p className={`${isSupervisor ? "text-sm" : "text-xs"} font-semibold text-blue-600 uppercase tracking-wide mt-1`}>{role}</p>
         </div>
       </div>
 
       {/* Academic Info */}
-      <div className="text-xs text-slate-500 space-y-1 border-t border-slate-100 pt-3 flex-grow">
-        <p><span className="font-medium text-slate-700"></span> {university}</p>
+      <div className={`${isSupervisor ? "text-[0.9rem]" : "text-[0.85rem]"} text-slate-500 space-y-1.5 border-t border-slate-100 pt-4 flex-grow`}>
+        <p className="font-medium text-slate-800">{university}</p>
         <p><span className="font-medium text-slate-700">Faculty:</span> {faculty}</p>
         <p><span className="font-medium text-slate-700">Department:</span> {department}</p>
       </div>
 
       {/* Contact Links - Parallel layout */}
-      <div className="flex items-center justify-between gap-4 border-t border-slate-100 pt-3">
+      <div className="flex items-center justify-between gap-4 border-t border-slate-100 pt-4">
         {/* Email */}
         <a
           href={`mailto:${email}`}
-          className="inline-flex items-center gap-2 text-xs text-slate-500 hover:text-blue-600 transition-colors truncate"
+          className="inline-flex items-center gap-2 text-xs font-medium text-slate-500 hover:text-blue-600 transition-colors truncate"
           title={email}
           aria-label={`Send email to ${name}`}
         >
@@ -103,14 +103,14 @@ function MemberCard({
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 text-xs font-medium text-slate-500 hover:text-blue-600 transition-colors flex-shrink-0"
             aria-label={`LinkedIn profile of ${name}`}
           >
             <IconLinkedIn />
             LinkedIn
           </a>
         ) : (
-          <span className="inline-flex items-center gap-2 text-xs text-slate-400 flex-shrink-0" title="Coming soon">
+          <span className="inline-flex items-center gap-2 text-xs font-medium text-slate-400 flex-shrink-0" title="Coming soon">
             <IconLinkedIn />
             LinkedIn
           </span>
@@ -143,16 +143,16 @@ export default function About() {
         <div className="container-main">
           <h2
             id="supervisors-heading"
-            className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-8 text-center"
+            className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-10 text-center"
           >
             Supervisors
           </h2>
           <ul
             role="list"
-            className="flex flex-wrap justify-center gap-6 mb-16"
+            className="flex flex-wrap justify-center gap-8 mb-20"
           >
             {supervisors.map((sv) => (
-              <li key={sv.id} className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm">
+              <li key={sv.id} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(40%-2rem)] max-w-lg">
                 <MemberCard
                   name={sv.name}
                   role={sv.role}
@@ -169,18 +169,18 @@ export default function About() {
             ))}
           </ul>
 
-          <div className="divider mb-16" />
+          <div className="divider mb-20" />
 
           {/* Group Members */}
           <h2
             id="team-heading"
-            className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-8 text-center"
+            className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-10 text-center"
           >
             Group Members
           </h2>
           <ul
             role="list"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8"
           >
             {teamMembers.map((member) => (
               <li key={member.id}>

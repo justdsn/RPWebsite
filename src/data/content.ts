@@ -246,9 +246,9 @@ export const teamMembers = [
     email: "dhanuka1222@gmail.com",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/member2.jpg"
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     faculty: "Faculty of Computing",
     department: "Information Technology",
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "T2",
   },
   {
@@ -258,9 +258,9 @@ export const teamMembers = [
     email: "member3@example.ac.lk",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/member3.jpg"
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     faculty: "Faculty of Computing",
     department: "Information Technology",
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "T3",
   },
   {
@@ -270,9 +270,9 @@ export const teamMembers = [
     email: "member4@example.ac.lk",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/member4.jpg"
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     faculty: "Faculty of Computing",
     department: "Information Technology",
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "T4",
   },
 ];
@@ -285,9 +285,9 @@ export const supervisors = [
     email: "kavinga.y@sliit.lk",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/supervisor1.jpg"
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     faculty: "Faculty of Computing",
     department: "Information Technology",
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "SV",
   },
   {
@@ -297,9 +297,9 @@ export const supervisors = [
     email: "kanishka.y@sliit.lk",
     linkedin: "#", // TODO: Replace with LinkedIn profile URL
     image: "#",   // TODO: Replace with photo path, e.g. "/images/supervisor2.jpg"
+    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     faculty: "Faculty of Computing",
     department: "Information Technology",
-    university: "Sri Lanka Institute of Information Technology (SLIIT)",
     initials: "CS",
   },
 ];
