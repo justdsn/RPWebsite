@@ -241,7 +241,7 @@ export const documents = [
   {
     id: "charter",
     title: "Project Charter",
-    description: "Formal project initiation document defining scope, objectives, and stakeholder responsibilities.",
+    description: "Formal project initiation document",
     link: "#", // TODO: Replace with Google Drive link for Project Charter
   },
   {
@@ -281,7 +281,7 @@ export const presentations = [
     id: "pp2-slides",
     title: "Progress Presentation 2",
     description: "Second progress review covering the integrated prototype.",
-    link: "#", // TODO: Replace with Google Drive link for Progress Presentation 2
+    link: "https://drive.google.com/file/d/1QHKuvZn2K9JPoZ9VpUukw628fGjVUvoF/view?usp=sharing", // TODO: Replace with Google Drive link for Progress Presentation 2
   },
   {
     id: "final-slides",
