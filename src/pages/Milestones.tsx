@@ -11,8 +11,8 @@ const IconCalendar = () => (
 
 const IconMark = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="flex-shrink-0">
-    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
-    <path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    <circle cx="12" cy="9" r="6" stroke="currentColor" strokeWidth="1.8" />
+    <path d="M9 14.2L5 22l7-3 7 3-4-7.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 

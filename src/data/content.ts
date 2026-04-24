@@ -172,7 +172,7 @@ export const milestones = [
     description:
       "The initial project proposal covers problem identification, scope definition, preliminary literature review, and high-level methodology. Presented to receive funding or get the project approved.",
     date: "September 2025",
-    marks: 6,
+    marks: 12,
   },
   {
     id: "pp1",
@@ -180,7 +180,7 @@ export const milestones = [
     description:
       "Progress Presentation I reviews the 50% completion status of the project. This reveals any gaps or inconsistencies in the design/requirements.",
     date: "January 2026",
-    marks: 6,
+    marks: 15,
   },
   {
     id: "pp2",
@@ -204,7 +204,7 @@ export const milestones = [
     description:
       "Status of the project is validated through the Logbook. This also includes Status documents 1 and 2.",
     date: "April 2026",
-    marks: 3,
+    marks: 4,
   },
   {
     id: "research-paper",
@@ -258,9 +258,15 @@ export const documents = [
   },
   {
     id: "final-doc",
-    title: "Final Documents",
+    title: "Final Reports",
     description: "Individual and group final documents",
     link: "https://drive.google.com/drive/folders/1WD6tNv8xh7K1TFKQAykJNnBetxIkRu9w?usp=sharing", // TODO: Replace with Google Drive link for Final Documents
+  },
+  {
+    id: "research-paper",
+    title: "Research Paper",
+    description: "The research paper written on FootprintLK",
+    link: "https://drive.google.com/file/d/1hUrI7IQnGbwq07YJbN1I0fat_9g0iqmi/view?usp=sharing", // TODO: Replace with Google Drive link for Final Documents
   },
 ];
 
