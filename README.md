@@ -1,6 +1,14 @@
 # FootprintLK - Privacy-First Digital Footprint Intelligence
 
-FootprintLK is a Sri Lanka-focused research project designed to help citizens understand and manage their digital footprint. By leveraging OSINT (Open Source Intelligence) techniques and AI-driven analysis, the system identifies publicly exposed personal information and provides actionable privacy recommendations aligned with the **Sri Lanka Personal Data Protection Act (PDPA) No. 9 of 2022**.
+FootprintLK is a premium, Sri Lanka-focused research project designed to help citizens understand and manage their digital footprint. By leveraging OSINT (Open Source Intelligence) techniques and AI-driven analysis, the system identifies publicly exposed personal information and provides actionable privacy recommendations aligned with the **Sri Lanka Personal Data Protection Act (PDPA) No. 9 of 2022**.
+
+## 🎨 Premium UI Experience
+
+The project features a **Strategic Architect** design aesthetic, moving away from generic templates to a bespoke, professional UI. 
+- **Glassmorphic Components**: High-end depth with backdrop blurs and subtle shadow work.
+- **Architectural Grid Layouts**: Clean, tech-forward backgrounds with ambient glows.
+- **Responsive & Dynamic**: Optimized for all devices with smooth transitions and hover effects.
+- **Custom Branding**: Features a unique digital footprint SVG favicon and a unified color palette of deep blue and indigo.
 
 ## 🚀 Key Features
 
@@ -13,7 +21,7 @@ FootprintLK is a Sri Lanka-focused research project designed to help citizens un
 
 - **Frontend**: React 19 + TypeScript + Vite
 - **Styling**: Tailwind CSS 4.0
-- **Routing**: React Router 7
+- **Icons**: Lucide React + Custom SVG Brand Assets
 - **Project Structure**: Component-based architecture with centralized content management in `src/data/content.ts`.
 
 ## 📦 Getting Started
@@ -41,17 +49,18 @@ FootprintLK is a Sri Lanka-focused research project designed to help citizens un
    npm run dev
    ```
 
-4. Build for production:
-   ```bash
-   npm run build
-   ```
-
 ## 📂 Project Structure
 
 - `src/components/`: Reusable UI components (Navbar, Footer, SectionHeaders, etc.)
 - `src/pages/`: Main page views (Home, Scope, Milestones, Downloads, About, Contact)
-- `src/data/content.ts`: **Centralized file for updating website text, links, and documents.**
-- `src/index.css`: Global styles and Tailwind configuration.
+- `src/data/content.ts`: **Centralized file for updating website text, links, documents, and milestone marks.**
+- `public/`: Static assets including the custom `favicon.svg`.
+
+## 📧 Contact & Support
+
+For enquiries, collaborations, or research information, the contact system is fully functional. 
+- **Email**: [footprintlk.info@gmail.com](mailto:footprintlk.info@gmail.com)
+- **Location**: Sri Lanka Institute of Information Technology (SLIIT)
 
 ## 📄 License
 
