@@ -62,6 +62,28 @@ For enquiries, collaborations, or research information, the contact system is fu
 - **Email**: [footprintlk.info@gmail.com](mailto:footprintlk.info@gmail.com)
 - **Location**: Sri Lanka Institute of Information Technology (SLIIT)
 
+## 🌐 Hosting & Deployment
+
+The website is hosted on **Firebase Hosting** at: [https://footprintlk.web.app](https://footprintlk.web.app)
+
+### Deployment Steps:
+
+1. **Install Firebase Tools** (if not already installed):
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+2. **Login to Firebase**:
+   ```bash
+   firebase login
+   ```
+
+3. **Build & Deploy**:
+   ```bash
+   npm run deploy
+   ```
+   *This command runs `vite build` followed by `firebase deploy`.*
+
 ## 📄 License
 
 This is an academic research project conducted at the **Sri Lanka Institute of Information Technology (SLIIT)**. All rights reserved.

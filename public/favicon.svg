@@ -13,10 +13,9 @@
   <path
     d="M27 38 L27 32 C27 26.5 43 26.5 43 32 L43 38"
     stroke="white"
-    strokeWidth="3"
+    strokeWidth="4"
     strokeLinecap="round"
     fill="none"
   />
-  <circle cx="35" cy="47" r="3" fill="#2563eb" />
-  <rect x="34" y="47" width="2" height="5" rx="1" fill="#2563eb" />
+  <circle cx="35" cy="48" r="3" fill="#3b82f6" />
 </svg>
