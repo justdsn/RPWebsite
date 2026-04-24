@@ -69,6 +69,13 @@ export default function Contact() {
       document.getElementById(`field-${firstKey}`)?.focus();
       return;
     }
+
+    const { name, email, subject, message } = form;
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${message}`;
+    const mailtoUrl = `mailto:footprintlk.info@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    window.location.href = mailtoUrl;
+
     setSubmitted(true);
     setForm(emptyForm);
     setErrors({});
@@ -87,7 +94,7 @@ export default function Contact() {
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_100%_at_50%_0%,#000_20%,transparent_100%)]"></div>
         </div>
-        
+
         <div className="absolute top-0 right-1/4 w-[30rem] h-[30rem] bg-blue-300/10 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
 
         <div className="container-main relative z-10 py-20 lg:py-28 text-center max-w-4xl mx-auto flex flex-col items-center">
@@ -97,8 +104,8 @@ export default function Contact() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
-            Connect with our <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">Research Team</span>
+            Connect with our <br></br>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">Team</span>
           </h1>
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
             Have questions about FootprintLK? Reach out for enquiries, collaborations, or general information.
@@ -194,12 +201,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-green-800 mb-1">
-                      Message received
+                      Message Drafted
                     </h3>
                     <p className="text-sm text-green-700 leading-relaxed">
-                      Thank you for reaching out. This form is for demonstration
-                      purposes. In a production environment, your message would be
-                      delivered to the research team.
+                      Thank you for reaching out. Your default mail client has been opened with the drafted message. 
+                      Please send the email to complete the process.
                     </p>
                   </div>
                   <button
