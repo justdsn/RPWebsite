@@ -17,7 +17,7 @@ export default function Scope() {
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_100%_at_50%_0%,#000_20%,transparent_100%)]"></div>
         </div>
-        
+
         <div className="absolute top-0 right-1/4 w-[30rem] h-[30rem] bg-blue-300/10 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
 
         <div className="container-main relative z-10 py-20 lg:py-28 text-center max-w-4xl mx-auto flex flex-col items-center">
@@ -30,7 +30,7 @@ export default function Scope() {
             Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">Scope</span>
           </h1>
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
-            Defining the boundaries, objectives, and methodologies of our digital footprint research.
+            Defining the boundaries, objectives, and methodologies of FootprintLK.
           </p>
         </div>
       </section>
@@ -44,9 +44,8 @@ export default function Scope() {
               return (
                 <div
                   key={section.id}
-                  className={`flex flex-col lg:flex-row gap-10 lg:gap-16 items-center ${
-                    isEven ? "" : "lg:flex-row-reverse"
-                  }`}
+                  className={`flex flex-col lg:flex-row gap-10 lg:gap-16 items-center ${isEven ? "" : "lg:flex-row-reverse"
+                    }`}
                 >
                   {/* Image Container */}
                   {section.image && (
@@ -76,11 +75,11 @@ export default function Scope() {
                         Section {String(idx + 1).padStart(2, "0")}
                       </span>
                     </div>
-                    
+
                     <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
                       {section.title}
                     </h2>
-                    
+
                     <div className="prose prose-slate max-w-none">
                       {section.content && (
                         <div className="text-slate-600 leading-relaxed text-sm lg:text-[15px] text-justify mb-6">
@@ -107,9 +106,9 @@ export default function Scope() {
                           </div>
                         </div>
                       )}
-                      
+
                       {section.points && section.mainObjective && (
-                         <h3 className="text-slate-800 font-bold text-lg mb-4">Specific Objectives</h3>
+                        <h3 className="text-slate-800 font-bold text-lg mb-4">Specific Objectives</h3>
                       )}
 
                       {section.subSections && (
@@ -171,32 +170,31 @@ export default function Scope() {
                       {section.techStack && (
                         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                           {section.techStack.map((category: any, catIdx: number) => (
-                            <div 
-                              key={catIdx} 
-                              className={`relative group bg-white/70 backdrop-blur-md p-8 rounded-[2rem] border border-slate-200/60 shadow-xl shadow-slate-200/20 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200/50 transition-all duration-500 ${
-                                catIdx === 0 ? "md:col-span-2 lg:col-span-1" : ""
-                              }`}
+                            <div
+                              key={catIdx}
+                              className={`relative group bg-white/70 backdrop-blur-md p-8 rounded-[2rem] border border-slate-200/60 shadow-xl shadow-slate-200/20 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200/50 transition-all duration-500 ${catIdx === 0 ? "md:col-span-2 lg:col-span-1" : ""
+                                }`}
                             >
                               {/* Decorative element */}
                               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 -z-10" />
-                              
+
                               <h4 className="text-xl font-black text-slate-900 mb-8 flex items-center gap-3">
                                 <span className="w-1.5 h-6 bg-blue-600 rounded-full shadow-[0_0_10px_rgba(37,99,235,0.4)]" />
                                 {category.category}
                               </h4>
-                              
+
                               <div className="flex flex-wrap gap-5">
                                 {category.items.map((tech: any, techIdx: number) => (
-                                  <div 
-                                    key={techIdx} 
+                                  <div
+                                    key={techIdx}
                                     className="group/item flex flex-col items-center gap-3"
                                   >
                                     <div className="w-16 h-16 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center p-3.5 transition-all duration-300 group-hover/item:-translate-y-2 group-hover/item:shadow-lg group-hover/item:border-blue-200 group-hover/item:bg-gradient-to-b group-hover/item:from-white group-hover/item:to-blue-50/30">
                                       {tech.logo ? (
-                                        <img 
-                                          src={tech.logo} 
-                                          alt={tech.name} 
-                                          className="w-full h-full object-contain filter group-hover/item:brightness-110 transition-all" 
+                                        <img
+                                          src={tech.logo}
+                                          alt={tech.name}
+                                          className="w-full h-full object-contain filter group-hover/item:brightness-110 transition-all"
                                         />
                                       ) : (
                                         <div className="w-full h-full bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center font-black text-xl">
