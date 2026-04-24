@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "footprintlk"
+    "default": "footprintlk-70a33"
+  },
+  "targets": {
+    "footprintlk-70a33": {
+      "hosting": {
+        "rp": [
+          "footprintlk-rp"
+        ]
+      }
+    }
   }
 }

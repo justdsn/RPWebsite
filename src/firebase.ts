@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDdGTWvZEiZqF1VAnkgwTIHcaHQOUVh2co",
-  authDomain: "footprintlk.firebaseapp.com",
-  projectId: "footprintlk",
-  storageBucket: "footprintlk.firebasestorage.app",
-  messagingSenderId: "56446676407",
-  appId: "1:56446676407:web:b589157ee04528938bcc32"
+  apiKey: "AIzaSyAMGdQ-LFCzh-F0J77vIvGQKkPojrzwQQQ",
+  authDomain: "footprintlk-70a33.firebaseapp.com",
+  projectId: "footprintlk-70a33",
+  storageBucket: "footprintlk-70a33.firebasestorage.app",
+  messagingSenderId: "362527915147",
+  appId: "1:362527915147:web:20f29bead3683323b8a88e"
 };
 
 // Initialize Firebase

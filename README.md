@@ -4,7 +4,7 @@ FootprintLK is a premium, Sri Lanka-focused research project designed to help ci
 
 ## 🎨 Premium UI Experience
 
-The project features a **Strategic Architect** design aesthetic, moving away from generic templates to a bespoke, professional UI. 
+The project features a **Strategic Architect** design aesthetic, moving away from generic templates to a bespoke, professional UI.
 - **Glassmorphic Components**: High-end depth with backdrop blurs and subtle shadow work.
 - **Architectural Grid Layouts**: Clean, tech-forward backgrounds with ambient glows.
 - **Responsive & Dynamic**: Optimized for all devices with smooth transitions and hover effects.
@@ -22,6 +22,7 @@ The project features a **Strategic Architect** design aesthetic, moving away fro
 - **Frontend**: React 19 + TypeScript + Vite
 - **Styling**: Tailwind CSS 4.0
 - **Icons**: Lucide React + Custom SVG Brand Assets
+- **Hosting**: Firebase Hosting (Project: `footprintlk-70a33`)
 - **Project Structure**: Component-based architecture with centralized content management in `src/data/content.ts`.
 
 ## 📦 Getting Started
@@ -30,6 +31,7 @@ The project features a **Strategic Architect** design aesthetic, moving away fro
 
 - Node.js (v18 or higher)
 - npm or yarn
+- Firebase CLI (`npm install -g firebase-tools`)
 
 ### Installation
 
@@ -51,29 +53,62 @@ The project features a **Strategic Architect** design aesthetic, moving away fro
 
 ## 📂 Project Structure
 
-- `src/components/`: Reusable UI components (Navbar, Footer, SectionHeaders, etc.)
-- `src/pages/`: Main page views (Home, Scope, Milestones, Downloads, About, Contact)
-- `src/data/content.ts`: **Centralized file for updating website text, links, documents, and milestone marks.**
-- `public/`: Static assets including the custom `favicon.svg`.
+```
+RPWebsite/
+├── public/                  # Static assets (favicon.svg, etc.)
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── Footer.tsx
+│   │   ├── HeroIllustration.tsx
+│   │   ├── Layout.tsx
+│   │   ├── Navbar.tsx
+│   │   └── SectionHeader.tsx
+│   ├── pages/               # Main page views
+│   │   ├── Home.tsx
+│   │   ├── Scope.tsx
+│   │   ├── Milestones.tsx
+│   │   ├── Downloads.tsx
+│   │   ├── About.tsx
+│   │   ├── Contact.tsx
+│   │   └── NotFound.tsx
+│   ├── data/
+│   │   └── content.ts       # ⭐ Centralized content — edit text, links & milestones here
+│   ├── firebase.ts          # Firebase app initialization
+│   ├── App.tsx
+│   └── main.tsx
+├── firebase.json            # Firebase Hosting config
+├── .firebaserc              # Firebase project & hosting target config
+├── vite.config.ts
+└── package.json
+```
+
+> **To update website content** (text, document links, milestone status), edit only `src/data/content.ts`.
 
 ## 📧 Contact & Support
 
-For enquiries, collaborations, or research information, the contact system is fully functional. 
+For enquiries, collaborations, or research information, the contact system is fully functional.
 - **Email**: [footprintlk.info@gmail.com](mailto:footprintlk.info@gmail.com)
 - **Location**: Sri Lanka Institute of Information Technology (SLIIT)
 
 ## 🌐 Hosting & Deployment
 
-The website is hosted on **Firebase Hosting** at: [https://footprintlk.web.app](https://footprintlk.web.app)
+The website is hosted on **Firebase Hosting** and live at:
+**[https://footprintlk-rp.web.app](https://footprintlk-rp.web.app)**
 
-### Deployment Steps:
+| Setting | Value |
+|---|---|
+| Firebase Project | `footprintlk-70a33` |
+| Hosting Site | `footprintlk-rp` |
+| Live URL | https://footprintlk-rp.web.app |
 
-1. **Install Firebase Tools** (if not already installed):
+### Deployment Steps
+
+1. **Install Firebase Tools** (first time only):
    ```bash
    npm install -g firebase-tools
    ```
 
-2. **Login to Firebase**:
+2. **Login to Firebase** (first time only):
    ```bash
    firebase login
    ```
@@ -82,7 +117,13 @@ The website is hosted on **Firebase Hosting** at: [https://footprintlk.web.app](
    ```bash
    npm run deploy
    ```
-   *This command runs `vite build` followed by `firebase deploy`.*
+   *This runs `vite build` followed by `firebase deploy`.*
+
+### Firebase Hosting Target
+
+The project uses a named hosting target (`rp`) mapped to the `footprintlk-rp` site. This is configured in:
+- **`firebase.json`** — `"target": "rp"`
+- **`.firebaserc`** — maps target `rp` → site `footprintlk-rp`
 
 ## 📄 License
 
