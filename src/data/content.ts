@@ -268,25 +268,25 @@ export const presentations = [
   {
     id: "proposal-slides",
     title: "Proposal Presentation",
-    description: "Slides presented at the project proposal presentation.",
+    description: "Slides presented at the project proposal presentation",
     link: "https://drive.google.com/file/d/1nvqJJMnVfa9luYqpxbnVwaHRWvsD2SjI/view?usp=sharing", // TODO: Replace with Google Drive link for Proposal Presentation
   },
   {
     id: "pp1-slides",
-    title: "Progress Presentation 1",
-    description: "First progress review presented to the panel.",
+    title: "Progress Presentation I",
+    description: "First progress review presented to the panel",
     link: "https://drive.google.com/file/d/1TRkVJ7yxC_9q0DfekgIiAd1f1wdKwbMW/view?usp=sharing", // TODO: Replace with Google Drive link for Progress Presentation 1
   },
   {
     id: "pp2-slides",
-    title: "Progress Presentation 2",
-    description: "Second progress review presented to the panel.",
+    title: "Progress Presentation II",
+    description: "Second progress review presented to the panel",
     link: "https://drive.google.com/file/d/1QHKuvZn2K9JPoZ9VpUukw628fGjVUvoF/view?usp=sharing", // TODO: Replace with Google Drive link for Progress Presentation 2
   },
   {
     id: "final-slides",
     title: "Final Presentation",
-    description: "Slides used during the final assessment and system demonstration.",
+    description: "Slides used during the final assessment and system demonstration",
     link: "#", // TODO: Replace with Google Drive link for Final Presentation
   },
 ];
