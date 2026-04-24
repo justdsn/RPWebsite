@@ -280,7 +280,7 @@ export const presentations = [
   {
     id: "pp2-slides",
     title: "Progress Presentation 2",
-    description: "Second progress review covering the integrated prototype.",
+    description: "Second progress review presented to the panel.",
     link: "https://drive.google.com/file/d/1QHKuvZn2K9JPoZ9VpUukw628fGjVUvoF/view?usp=sharing", // TODO: Replace with Google Drive link for Progress Presentation 2
   },
   {
