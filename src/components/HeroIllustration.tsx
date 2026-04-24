@@ -108,7 +108,6 @@ export default function HeroIllustration() {
         <text x="10" y="18" fontFamily="Inter, sans-serif" fontSize="9" fontWeight="600" fill="#1d4ed8">LK Context</text>
         <text x="10" y="46" fontFamily="Inter, sans-serif" fontSize="8" fill="#64748b">Sinhala / English</text>
         <text x="10" y="58" fontFamily="Inter, sans-serif" fontSize="8" fill="#94a3b8">Transliteration</text>
-        <text x="10" y="70" fontFamily="Inter, sans-serif" fontSize="8" fill="#64748b">PDPA 2022 Aware</text>
         <rect x="85" y="38" width="24" height="8" rx="4" fill="#dbeafe" />
         <rect x="85" y="50" width="18" height="8" rx="4" fill="#eff6ff" />
         <rect x="85" y="62" width="22" height="8" rx="4" fill="#dbeafe" />

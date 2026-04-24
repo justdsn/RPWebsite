@@ -206,9 +206,6 @@ export default function Home() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1.5 flex-wrap">
                       <span className="text-[0.7rem] font-bold text-blue-400 mono">{cap.label}</span>
-                      <span className="section-tag" style={{ marginBottom: 0, fontSize: "0.65rem" }}>
-                        {cap.tag}
-                      </span>
                     </div>
                     <h3 className="text-[0.95rem] font-semibold text-slate-800 mb-2">
                       {cap.title}

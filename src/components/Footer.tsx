@@ -32,9 +32,6 @@ export default function Footer() {
             <p className="text-[0.9rem] text-slate-400 leading-relaxed max-w-xs mb-4">
               A Sri Lanka-focused privacy and OSINT research project helping citizens understand and manage their digital footprint.
             </p>
-            <p className="text-xs text-slate-500 font-medium px-2.5 py-1 rounded-md bg-slate-800/50 border border-slate-700/50 inline-block">
-              PDPA 2022 Principles
-            </p>
           </div>
 
           {/* Quick Links */}

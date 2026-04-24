@@ -39,7 +39,6 @@ export const homeCapabilities = [
     title: "Facial Exposure Detection",
     description:
       "Detect and match faces across public web sources using MTCNN, FaceNet embeddings, and FAISS similarity search, with privacy-first data handling.",
-    tag: "OSINT + Privacy Research",
   },
   {
     id: "social",
@@ -47,7 +46,6 @@ export const homeCapabilities = [
     title: "Social Media Footprint Analysis",
     description:
       "Collect and analyze public social media data for impersonation signals, PII exposure, username correlation, and NER, with Sinhala/English transliteration support.",
-    tag: "OSINT Analysis",
   },
   {
     id: "breach",
@@ -55,7 +53,6 @@ export const homeCapabilities = [
     title: "Data Breach Analysis",
     description:
       "Check whether identifiers appear in known breach datasets. Framed as awareness and education, not as a surveillance tool.",
-    tag: "Awareness Tool",
   },
   {
     id: "compliance",
@@ -63,7 +60,6 @@ export const homeCapabilities = [
     title: "Privacy Compliance Advisor",
     description:
       "Maps detected scenarios to Sri Lanka privacy-related legislation, explains applicable clauses, and provides actionable recommendations.",
-    tag: "PDPA 2022-Aware",
   },
 ];
 
