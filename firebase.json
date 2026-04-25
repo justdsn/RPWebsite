@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "rp",
+    "target": "main",
     "public": "dist",
     "ignore": [
       "firebase.json",
