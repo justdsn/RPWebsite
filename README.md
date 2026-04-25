@@ -8,7 +8,7 @@ The project features a **Strategic Architect** design aesthetic, moving away fro
 - **Glassmorphic Components**: High-end depth with backdrop blurs and subtle shadow work.
 - **Architectural Grid Layouts**: Clean, tech-forward backgrounds with ambient glows.
 - **Responsive & Dynamic**: Optimized for all devices with smooth transitions and hover effects.
-- **Custom Branding**: Features a unique digital footprint SVG favicon and a unified color palette of deep blue and indigo.
+- **Custom Branding**: Features a unique digital footprint favicon and a unified color palette of deep blue and indigo.
 
 ## 🚀 Key Features
 
