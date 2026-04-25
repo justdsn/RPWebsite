@@ -1,6 +1,6 @@
 # FootprintLK - Privacy-First Digital Footprint Intelligence
 
-FootprintLK is a premium, Sri Lanka-focused research project designed to help citizens understand and manage their digital footprint. By leveraging OSINT (Open Source Intelligence) techniques and AI-driven analysis, the system identifies publicly exposed personal information and provides actionable privacy recommendations aligned with the **Sri Lanka Personal Data Protection Act (PDPA) No. 9 of 2022**.
+FootprintLK is a premium, Sri Lanka-focused research project designed to help citizens understand and manage their digital footprint. By leveraging OSINT (Open Source Intelligence) techniques and AI-driven analysis, the system identifies publicly exposed personal information and provides actionable privacy recommendations.
 
 ## 🎨 Premium UI Experience
 
@@ -15,14 +15,14 @@ The project features a **Strategic Architect** design aesthetic, moving away fro
 - **Facial Exposure Detection**: Uses MTCNN and FaceNet to match faces across public web sources and detect identity exposure.
 - **Social Media Analysis**: Analyzes public social media data for impersonation signals and PII leakage, with specific support for Sinhala/English transliteration variants.
 - **Data Breach Intelligence**: Correlates user identifiers with known global and local data breach datasets.
-- **Privacy Compliance Advisor**: Automatically maps detected risks to specific clauses of the SL PDPA 2022 and provides mitigation steps.
+- **Privacy Compliance Advisor**: Automatically maps detected risks to privacy-related legislation and provides mitigation steps.
 
 ## 🛠️ Technology Stack
 
 - **Frontend**: React 19 + TypeScript + Vite
 - **Styling**: Tailwind CSS 4.0
 - **Icons**: Lucide React + Custom SVG Brand Assets
-- **Hosting**: Firebase Hosting (Project: `footprintlk-70a33`)
+- **Hosting**: Firebase Hosting (Project: `footprintlk-rpwebsite`)
 - **Project Structure**: Component-based architecture with centralized content management in `src/data/content.ts`.
 
 ## 📦 Getting Started
@@ -93,13 +93,13 @@ For enquiries, collaborations, or research information, the contact system is fu
 ## 🌐 Hosting & Deployment
 
 The website is hosted on **Firebase Hosting** and live at:
-**[https://footprintlk-rp.web.app](https://footprintlk-rp.web.app)**
+**[https://footprintlk.web.app](https://footprintlk.web.app)**
 
 | Setting | Value |
 |---|---|
-| Firebase Project | `footprintlk-70a33` |
-| Hosting Site | `footprintlk-rp` |
-| Live URL | https://footprintlk-rp.web.app |
+| Firebase Project | `footprintlk-rpwebsite` |
+| Hosting Site | `footprintlk` |
+| Live URL | https://footprintlk.web.app |
 
 ### Deployment Steps
 
@@ -121,9 +121,9 @@ The website is hosted on **Firebase Hosting** and live at:
 
 ### Firebase Hosting Target
 
-The project uses a named hosting target (`rp`) mapped to the `footprintlk-rp` site. This is configured in:
-- **`firebase.json`** — `"target": "rp"`
-- **`.firebaserc`** — maps target `rp` → site `footprintlk-rp`
+The project uses a named hosting target (`main`) mapped to the `footprintlk` site. This is configured in:
+- **`firebase.json`** — `"target": "main"`
+- **`.firebaserc`** — maps target `main` → site `footprintlk`
 
 ## 📄 License
 
