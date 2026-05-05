@@ -33,28 +33,44 @@ type DocItem = {
   id: string;
   title: string;
   description: string;
-  link: string;
+  status: "available" | "pending";
+  link: string | null;
 };
 
 function DocListItem({ item }: { item: DocItem }) {
   return (
-    <li className="flex flex-col sm:flex-row items-start justify-between gap-4 py-5 px-6 border border-slate-100 bg-white hover:bg-slate-50/50 hover:shadow-lg hover:shadow-blue-500/5 hover:-translate-y-0.5 hover:border-blue-200 transition-all duration-300 rounded-2xl mb-4 group">
+    <li className="flex items-start justify-between gap-4 py-4 border-b border-slate-100 last:border-0 group">
       <div className="flex-1 min-w-0">
-        <h3 className="text-[1.05rem] font-bold text-slate-800 mb-1.5 group-hover:text-blue-600 transition-colors">{item.title}</h3>
-        <p className="text-[0.95rem] text-slate-500 leading-relaxed font-medium">{item.description}</p>
+        <h3 className="text-[0.9rem] font-semibold text-slate-800 mb-0.5">{item.title}</h3>
+        <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
       </div>
-      <div className="flex items-center gap-3 flex-shrink-0 sm:pt-1 w-full sm:w-auto">
-        {/* Download button */}
-        <a
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-blue-600 hover:shadow-md transition-colors active:scale-95"
-          aria-label={`Download ${item.title}`}
+      <div className="flex items-center gap-3 flex-shrink-0 pt-0.5">
+        <span
+          className={`status-pill ${item.status === "available" ? "status-available" : "status-pending"
+            }`}
+          aria-label={`Status: ${item.status === "available" ? "Available" : "Pending"}`}
         >
-          <IconDownload />
-          Download
-        </a>
+          <span
+            aria-hidden="true"
+            className={`inline-block w-1.5 h-1.5 rounded-full ${item.status === "available" ? "bg-green-500" : "bg-yellow-500"
+              }`}
+          />
+          {item.status === "available" ? "Available" : "Pending"}
+        </span>
+
+        {item.status === "available" && item.link ? (
+          <a
+            href={item.link}
+            className="btn-primary py-1.5 px-3 text-xs"
+            download
+            aria-label={`Download ${item.title}`}
+          >
+            <IconDownload />
+            Download
+          </a>
+        ) : (
+          <span className="text-xs text-slate-400 font-medium">Coming soon</span>
+        )}
       </div>
     </li>
   );
@@ -72,29 +88,18 @@ export default function Downloads() {
 
   return (
     <main id="main-content">
-      {/* Premium Page Header */}
+      {/* Page header */}
       <section
         aria-label="Page header"
-        className="relative overflow-hidden bg-[#FAFAFA] border-b border-slate-200/60"
+        className="page-header-bg border-b border-slate-100"
       >
-        <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_100%_at_50%_0%,#000_20%,transparent_100%)]"></div>
-        </div>
-        
-        <div className="absolute top-0 left-1/4 w-[30rem] h-[30rem] bg-indigo-300/10 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
-
-        <div className="container-main relative z-10 py-20 lg:py-28 text-center max-w-4xl mx-auto flex flex-col items-center">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/80 shadow-sm mb-6">
-            <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-blue-600">
-              Resources
-            </span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
-            Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">Downloads</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
-            Access and download project documents, presentation slides, and other related resources.
-          </p>
+        <div className="container-main py-14 lg:py-20">
+          <SectionHeader
+            tag="Downloads"
+            title="Project Documents & Slides"
+            subtitle="Access project documents and presentation slides"
+            as="h1"
+          />
         </div>
       </section>
 
@@ -105,7 +110,7 @@ export default function Downloads() {
             <div
               role="tablist"
               aria-label="Download categories"
-              className="flex justify-center gap-2 mb-10 p-1.5 bg-slate-100/80 backdrop-blur-md rounded-2xl w-full max-w-md mx-auto shadow-inner"
+              className="flex gap-2 border-b border-slate-200 mb-8"
             >
               {tabs.map((tab) => (
                 <button
@@ -115,11 +120,10 @@ export default function Downloads() {
                   aria-selected={activeTab === tab.id}
                   aria-controls={`panel-${tab.id}`}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex-1 flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold rounded-xl transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? "bg-white text-blue-700 shadow-sm border border-slate-200/50"
-                      : "text-slate-500 hover:text-slate-800 hover:bg-slate-200/50"
-                  }`}
+                  className={`flex items-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 -mb-px transition-colors ${activeTab === tab.id
+                    ? "border-blue-600 text-blue-700"
+                    : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"
+                    }`}
                 >
                   {tab.icon}
                   {tab.label}
@@ -144,7 +148,13 @@ export default function Downloads() {
               </div>
             ))}
 
-
+            {/* Note */}
+            <div className="mt-8 flex items-start gap-3 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="flex-shrink-0 mt-0.5">
+                <circle cx="12" cy="12" r="10" stroke="#2563eb" strokeWidth="1.8" />
+                <path d="M12 8v4M12 16h.01" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>

@@ -289,7 +289,7 @@ export const presentations = [
     id: "final-slides",
     title: "Final Presentation",
     description: "Slides used during the final assessment and system demonstration",
-    link: "#", // TODO: Replace with Google Drive link for Final Presentation
+    link: "https://drive.google.com/file/d/1UsONluxO5NRPhtjKRlzOo3WvO7CN2NY8/view?usp=sharing", // TODO: Replace with Google Drive link for Final Presentation
   },
 ];
 
@@ -303,7 +303,7 @@ export const teamMembers = [
     id: "m1",
     name: "Disanayaka S.D.P.N.",
     role: "Group Leader",
-    email: "nethsara11d@gmail.com",
+    email: "#",
     linkedin: "https://www.linkedin.com/in/nethsara-disanayaka/", // TODO: Replace with LinkedIn profile URL
     image: "/images/m1.jpg",   // TODO: Replace with photo path, e.g. "/images/member1.jpg"
     university: "Sri Lanka Institute of Information Technology",
@@ -315,7 +315,7 @@ export const teamMembers = [
     id: "m2",
     name: "Nanayakkara K.A.D.D.S.",
     role: "Group Member",
-    email: "dhanuka1222@gmail.com",
+    email: "#",
     linkedin: "https://www.linkedin.com/in/dhanukasn/", // TODO: Replace with LinkedIn profile URL
     image: "/images/m2.jpg",   // TODO: Replace with photo path, e.g. "/images/member2.jpg"
     university: "Sri Lanka Institute of Information Technology",
@@ -327,7 +327,7 @@ export const teamMembers = [
     id: "m3",
     name: "Jayasena J.G.A.R.H.U.",
     role: "Group Member",
-    email: "ruwanharsha2001@gmail.com",
+    email: "#",
     linkedin: "https://www.linkedin.com/in/ruwantha-harshamal/", // TODO: Replace with LinkedIn profile URL
     image: "/images/m3.jpg",   // TODO: Replace with photo path, e.g. "/images/member3.jpg"
     university: "Sri Lanka Institute of Information Technology",
@@ -339,7 +339,7 @@ export const teamMembers = [
     id: "m4",
     name: "Wijesinghe R.P.D.K.N.",
     role: "Group Member",
-    email: "kosalawi36@gmail.com",
+    email: "#",
     linkedin: "https://www.linkedin.com/in/kosala-wijesinghe/", // TODO: Replace with LinkedIn profile URL
     image: "/images/m4.jpg",   // TODO: Replace with photo path, e.g. "/images/member4.jpg"
     university: "Sri Lanka Institute of Information Technology",
